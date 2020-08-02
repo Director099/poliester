@@ -1,0 +1,57 @@
+mixin mb-menu(src)
+  .mb-menu(id="menu", tabindex='-1', role='dialog')
+    .mb-menu__dialog
+      header.page-header
+        .page-header__top
+          .container
+            .page-header__row.page-header__row--sb
+              .page-header__logo
+                .d-xl-none
+                  button.close.page-header__menu(aria-label="Закрыть меню" data-fancybox-close="")
+                    span
+                +logo('/')
+                  img(src='img/icon/logo.png', alt='Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия', width='66', height='45')
+                  p Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия
+              .page-header__info
+                .d-xl-none
+                  button.icon-btn.js-show-user
+                    svg(width="22" height="22" fill="none")
+                      use(xlink:href="img/symbols.svg#icon-user")
+                  button.icon-btn.js-show-phone
+                    svg(width="22" height="22" fill="none")
+                      use(xlink:href="img/symbols.svg#icon-phone")
+                  button.icon-btn.js-show-basket()
+                    svg(width="27", height="23" fill="none")
+                      use(xlink:href="img/symbols.svg#basket")
+                    span.icon-btn__quan 5
+                  button.icon-btn.js-show-search
+                    svg(width="20" height="20" fill="none")
+                      use(xlink:href="img/symbols.svg#icon-serch")
+      .mb-menu__navigation
+        .container
+          nav.navigation
+            +mb-product()
+            ul.navigation__list
+              li.navigation__item
+                a.navigation__link(href="template-page.html") О компании
+              li.navigation__item
+                a.navigation__link(href="template-page.html") Условия работы
+              li.navigation__item
+                a.navigation__link(href="news.html") Новости
+              li.navigation__item
+                a.navigation__link(href="template-page.html") Контакты
+
+      footer.page-footer.page-footer--lighten.mb-menu__footer
+        .container
+          .page-footer__content
+            .page-footer__row.page-footer__row--xl-reverse
+              .page-footer__col.page-footer__col--xl-8
+                section.page-footer__commun
+                  h3.page-footer__title-info Контакты
+                  .page-footer__commun-row
+                    .page-footer__info
+                      +phone()
+                      a.page-footer__link(href="mailto:baimur@yandex.ru") baimur@yandex.ru
+                    .page-footer__address
+                      p Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)
+                      p Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)

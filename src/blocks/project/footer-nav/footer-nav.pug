@@ -1,0 +1,9 @@
+mixin footer-nav(text, mod)
+  .footer-nav
+    h3.footer-nav__title(class= mod)= text
+    ul.footer-nav__list
+      block
+
+mixin footer-nav-item(text)
+  li.footer-nav__item
+    a.footer-nav__link(href="#")!= text

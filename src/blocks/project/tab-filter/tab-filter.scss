@@ -1,0 +1,34 @@
+.tab-filter {
+  @include ul-none;
+  @include row(10px, 10px, 10px, 10px, 10px);
+  margin-bottom: 12px;
+  flex-wrap: nowrap;
+  overflow: auto;
+
+  @media (min-width: $screen-xl) {
+    flex-wrap: wrap;
+    margin-bottom: 17px;
+  }
+}
+
+.tab-filter__item {
+  padding-left: 5px;
+  padding-right: 5px;
+  flex-basis: auto;
+  margin-bottom: 10px;
+}
+
+.tab-filter__btn {
+  font-weight: 600;
+  padding: 6px 13px;
+
+  @media (min-width: $screen-xl) {
+    padding: 7px 13px;
+  }
+}
+
+.tab-filter__btn.active {
+  background-color: $color-main;
+  border-color: $color-main;
+  color: $white;
+}

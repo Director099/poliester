@@ -1,0 +1,92 @@
+mixin page-footer()
+  footer.page-footer
+    .page-footer__main
+      .page-footer__line
+        .container
+          .page-footer__row
+            .page-footer__col.page-footer__col--xl-3
+              .footer-nav
+                ul.footer-nav__list
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--title(href="#") О компании
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--title(href="#") Доставка
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--title(href="#") Партнерам
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--title(href="#") Новости
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--title(href="#") Контакты
+            .page-footer__col.page-footer__col--xl-3
+              +footer-nav('Контактная информация', 'footer-nav__title--ident')
+                li.footer-nav__item.footer-nav__item--ident
+                  span.footer-nav__link.footer-nav__link--size
+                    svg(width="13" height="20")
+                      use(xlink:href="img/symbols.svg#icon-point")
+                    | Офис: Уфа, ул. Кавказская 8/1
+                li.footer-nav__item.footer-nav__item--ident
+                  a.footer-nav__link.footer-nav__link--size(href="tel:+7(347)286-23-87")
+                    svg(width="18" height="18")
+                      use(xlink:href="img/symbols.svg#icon-phone")
+                    | +7 (347) 286-23-87
+                li.footer-nav__item.footer-nav__item--ident
+                  a.footer-nav__link.footer-nav__link--size(href="https://wa.me/79272365699")
+                    svg(width="22" height="22")
+                      use(xlink:href="img/symbols.svg#icon-whatapp")
+                    | +7 (927) 236-56-99
+            .page-footer__col.page-footer__col--xl-3
+              +footer-nav(' ', 'footer-nav__title--ident')
+                li.footer-nav__item.footer-nav__item--ident
+                  span.footer-nav__link.footer-nav__link--size
+                    svg(width="13" height="20")
+                      use(xlink:href="img/symbols.svg#icon-point")
+                    | Склад: Уфа, ул. Кавказская 8б
+                li.footer-nav__item.footer-nav__item--ident
+                  a.footer-nav__link.footer-nav__link--size(href="mailto:ufapoli@gmail.com")
+                    svg(width="20" height="15")
+                      use(xlink:href="img/symbols.svg#icon-email")
+                    | ufapoli@gmail.com
+            .page-footer__col.page-footer__col--xl-3
+              .footer-nav.footer-nav--xl-right.page-footer__nav-wrap
+                a.btn.btn--s-middle.btn--tr.btn--b-main.footer-nav__btn(href="#") Обсудить особые условия
+                +to-top('footer-nav__btn-right')
+      .page-footer__line.page-footer__line--pb.d-none.d-xl-block
+        .container
+          .page-footer__row
+            .page-footer__col.page-footer__col--xl-3
+              +footer-nav('Полипропиленовая продукция')
+                +footer-nav-item('Мешки полипропеленовые')
+                +footer-nav-item('Биг-бэги (Мягкие контейнера)')
+                +footer-nav-item('Сетка сеновязальная')
+                +footer-nav-item('Шпагат сеновязальный')
+                +footer-nav-item('Нить полипропиленовая')
+                +footer-nav-item('Лента полипропиленовая')
+            .page-footer__col.page-footer__col--xl-3
+              +footer-nav('Полиэтиленовая продукция')
+                +footer-nav-item('Мешки полиэтиленовые')
+                +footer-nav-item('Стрейч пленка')
+                +footer-nav-item('Пленка укрывная')
+                +footer-nav-item('Пленка тепличная')
+                +footer-nav-item('Пленка пузырчатая')
+                +footer-nav-item('Вкладыши для биг-бегов')
+            .page-footer__col.page-footer__col--xl-3
+              +footer-nav('Оборудование')
+                +footer-nav-item('Зажимное устройство для скоб')
+                +footer-nav-item('Зажимное устройство укороченное')
+                +footer-nav-item('Комбинированное устройство')
+                +footer-nav-item('Натяжитель для ПП ленты')
+                +footer-nav-item('Штатив для стрейч пленки')
+                +footer-nav-item('Ленторазмотчик для ПП ленты')
+                +footer-nav-item('Диспенсер для скотча')
+            .page-footer__col.page-footer__col--xl-3
+              +footer-nav('Сопутствующие товары')
+                +footer-nav-item('Клейкая лента упаковочная')
+                +footer-nav-item('Клейкая лента малярная')
+                +footer-nav-item('Перчатки рабочие')
+                +footer-nav-item('Ветошь')
+                +footer-nav-item('Нитки для мешкозашивочных машин')
+    .page-footer__bottom
+      .container
+        p.page-footer__copyright © 2013 ООО «Полистэр Уфа» #[br] #[br]  Производство и продажа упаковочных материалов и оборудования оптом
+        a.develop.page-footer__develop(href="https://pplans.ru/" target="_blank")
+          img(src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans")

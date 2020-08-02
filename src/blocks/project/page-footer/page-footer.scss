@@ -1,0 +1,75 @@
+.page-footer {
+
+}
+
+.page-footer__bottom {
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: $color-main2;
+}
+
+.page-footer__row {
+  @include row();
+}
+
+.page-footer__col {
+  @include make-col(12);
+
+  &--xl-3 {
+    @include col(xl, 3, 12);
+  }
+
+  &--xl-4 {
+    @include col(xl, 4, 12);
+  }
+
+  &--xl-8 {
+    @include col(xl, 8, 12);
+  }
+
+  &--xl-9 {
+    @include col(xl, 9, 12);
+  }
+}
+
+.page-footer__main {
+  background: #F4F7FA;
+}
+
+.page-footer__line {
+  padding-top: 50px;
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid #CCDCEC;
+
+  &--pb {
+    padding-bottom: 98px;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.page-footer__nav-wrap {
+  padding-top: 40px;
+}
+
+.page-footer__develop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-footer__copyright {
+  //text-align: center;
+  //
+  //padding-top: 23px;
+  //margin-top: 30px;
+  font-size: 10px;
+  line-height: 14px;
+  max-width: 197px;
+  color: #F2F2F2;
+  margin: 0;
+}

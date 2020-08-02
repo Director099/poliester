@@ -1,0 +1,243 @@
+// В этом файле должны быть стили для БЭМ-блока modal, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-family--headings:       $font-family !default;
+
+$font-size--h4:               rem(18px) !default;
+
+$line-height:                 1.5 !default;
+
+$screen-lg:                   992px !default;
+
+$opacity:                     0.7 !default;
+$transition-time:             0.3s !default;
+
+$z-index-modal:               100 !default;
+
+.js-modal-open {
+  overflow: hidden;
+}
+
+.modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: none;
+  overflow: hidden;
+  background: #F4F5F9;
+  padding: 0;
+  width: auto;
+  height: auto;
+  border: 1px solid #DFE2ED;
+  border-radius: 5px;
+  //box-shadow: 10px 10px 14px rgba(210, 215, 227, 0.45), -10px -10px 12px rgba(255, 255, 255, 0.25);
+  -webkit-overflow-scrolling: touch;
+
+  &--width .modal__dialog {
+    @media (min-width: $screen-lg) {
+      width: 420px;
+    }
+  }
+
+  &--full {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    border-radius: 0;
+    background-color: $white;
+
+    .modal__dialog {
+      width: 100%;
+    }
+  }
+
+  &--w-big {
+    //max-height: calc(100vh - 50px);
+    .modal__dialog {
+      @media (min-width: $screen-lg) {
+        width: 1078px;
+        //width: 100%;
+      }
+    }
+  }
+
+  &__dialog {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $screen-lg) {
+      width: 600px;
+      height: auto;
+
+      #{$block-name}--open & {
+        animation: modal-content-show $transition-time 1 both;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #F4F5F9;
+    outline: 0;
+  }
+
+  &__header {
+    padding: 25px 30px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #DFE2ED;
+
+    &--p0 {
+      padding: 0;
+    }
+
+    &--pb {
+      padding-bottom: 20px;
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 40px;
+      }
+    }
+
+    &--ident {
+      padding: 20px 15px 20px;
+
+      @media (min-width: $screen-xl) {
+        padding: 40px 65px 40px;
+      }
+    }
+
+    &--no-line {
+      border-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: currentColor;
+
+    &--medium {
+      font-weight: 500;
+    }
+
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+
+  &__close {
+    position: absolute !important; // stylelint-disable-line  declaration-no-important
+    top: 5px;
+    right: 5px;
+  }
+
+  &__body {
+    padding: 30px 30px 42px;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    padding: rem(15px);
+    flex-shrink: 0;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ($z-index-modal - 1);
+    background-color: rgba(0, 0, 0, $opacity);
+
+    @media (min-width: $screen-lg) {
+      animation: modal-backdrop-show $transition-time 1;
+    }
+  }
+
+  &--open {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.modal__group {
+  margin-bottom: 20px;
+
+  &--mb-mini {
+    margin-bottom: 12px;
+  }
+
+  &--mb-middle {
+    margin-bottom: 25px;
+  }
+}
+
+.modal__close {
+  top: 20px;
+  right: 22px;
+}
+
+@keyframes modal-backdrop-show {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-show {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal__baron {
+  padding: 0 15px 0px;
+  max-height: calc(100vh - 90px);
+  @media (min-width: $screen-xl) {
+    max-height: calc(100vh - 150px);
+    padding: 0 65px 140px;
+  }
+}
+
+.modal__baron .baron__track {
+  @media (min-width: $screen-xl) {
+    right: -15px;
+  }
+}
+
+.modal__content .content {
+  padding-bottom: 0;
+}
+
+//.modal__baron .baron__scroller {
+//  padding-bottom: 350px;
+//}

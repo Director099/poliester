@@ -1,0 +1,10 @@
+mixin category-link(text)
+  .category-link
+    header.category-link__header.d-none.d-xl-block
+      h3.category-link__title= text
+    ul.category-link__list.inner-scroll
+      block
+
+mixin category-link-item({nameClass, text})
+  li.category-link__item
+    a.btn.btn--lighten.category-link__link(href="#" class= nameClass)!= text

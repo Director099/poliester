@@ -1,0 +1,113 @@
+// В этом файле должны быть стили для БЭМ-блока dropdown, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$text-color:                  hsl(0, 0%, 10%) !default;
+
+$border-color:                hsl(0, 0%, 60%) !default;
+
+$border-radius:               rem(3px) !default;
+
+$transition-time:             0.3s !default;
+
+.dropdown {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: inline-block;
+
+  &__menu {
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    max-width: 90vw;
+    width: 1px;
+    margin: 0;
+    background-color: #fff;
+    color: $text-color;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity $transition-time;
+  }
+
+
+
+  &--open {
+
+    #{$block-name}__menu {
+      z-index: 1;
+      visibility: visible;
+      opacity: 1;
+      width: auto;
+    }
+  }
+
+  &--up {
+
+    #{$block-name}__menu {
+      top: auto;
+      bottom: 100%;
+    }
+  }
+
+  &--right {
+
+    #{$block-name}__menu {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.dropdown__toggler {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-75%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid #3E5268;
+    border-right: 1px solid #3E5268;
+    transition: $time;
+
+    @media (min-width: $screen-xl) {
+      right: 0;
+    }
+  }
+}
+
+.dropdown--filter .btn {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 17px;
+    height: 10px;
+    transform: translateY(-50%);
+    background: url('../img/icon/icon-filter.svg') no-repeat center / contain;
+
+    @media (min-width: $screen-xl) {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: 25px;
+  }
+}
+
+.dropdown--open .dropdown__toggler::after {
+  transform: translateY(-35%) rotate(-135deg);
+}

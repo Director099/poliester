@@ -1,0 +1,76 @@
+.review {
+  text-align: center;
+  padding: 0 16px 16px;
+  min-height: 282px;
+
+  border: 1px solid #CCDCEC;
+  border-radius: 16px;
+  background: url("../img/decor/decor-quote.png") no-repeat bottom left;
+
+  @media (min-width: $screen-xl) {
+    padding: 40px 35px 40px 40px;
+    text-align: left;
+  }
+}
+
+.review__row {
+  @media (min-width: $screen-xl) {
+    display: flex;
+  }
+}
+
+.review__img {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: -50px auto 15px;
+
+  &--play {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      width: 49px;
+      height: 49px;
+      background: url("../img/icon/icon-play.svg") no-repeat center;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-right: 55px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.review__desc {
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 30px;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.review__name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 11px;
+  color: #0054D7;
+}
+
+.review__company {
+  display: block;
+  font-size: 12px;
+  line-height: 19px;
+  opacity: 0.5;
+}

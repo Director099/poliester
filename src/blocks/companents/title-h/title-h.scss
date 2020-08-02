@@ -1,0 +1,52 @@
+.title-h {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0;
+
+  &--main {
+    color: $text-color;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  &--big {
+    font-size: 22px;
+    line-height: 30px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  }
+
+  &--m-big {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 65px;
+    }
+  }
+}
+
+.title-h__link {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #34A5E6;
+  text-decoration: none;
+  margin-left: 30px;
+
+  &--xs-none {
+    @media (max-width: $screen-xl - 1) {
+      display: none;
+    }
+  }
+}

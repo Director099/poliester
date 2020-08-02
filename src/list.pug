@@ -1,0 +1,25 @@
+extends pug/layout.pug
+
+block meta
+  title Список страниц
+block header
+  +page-header()
+block content
+  main
+    ul
+      li
+        a(href='index.html') Главная
+      li
+        a(href='news.html') Новости
+      li
+        a(href='catalog.html') Каталог (Без фильтра)
+      li
+        a(href='catalog-single.html') Каталог внутряк (Если несколько подвидовтовара )
+      li
+        a(href='template-page.html') Записть (о компании, контакты, новость)
+      li
+        a(href='thanks.html') Спасибо
+      li
+        a(href='404.html') 404
+block footer
+  +page-footer()

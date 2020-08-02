@@ -1,0 +1,28 @@
+mixin book(data)
+  .book
+    .book__inner
+      a.book__img(href="#")
+        img(src= `img/content/cat-${data.img}.jpg`, alt= data.title)
+      .book__figures-content
+        block
+      .book__content
+        .book__info
+          span.book__edition Полипропиленовая продукция
+        h2.book__title
+          a(href="#")= data.title
+        if(data.desc)
+          .book__desc
+            p= data.desc
+        .book__row
+          .book__prices
+            span.book__prices-from от
+            .book__prices-wrap
+              strong.book__price= `${data.price} ₽`
+              if(data.priceOld)
+                strong.book__price.book__price--old!= `${data.priceOld} ₽`
+          if(data.btns)
+            .book__btns
+              a.btn.btn--main.book__btn В корзину
+              a.btn.btn--light.book__btn(aria-label="Добавить в избранное")
+                svg.btn__icon(width="16", height="15")
+                  use(xlink:href="img/symbols.svg#icon-heart")

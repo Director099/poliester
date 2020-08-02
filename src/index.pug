@@ -1,0 +1,283 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header(true)
+block content
+  main
+    .content.content--overflow.content--xs-pb
+      .swiper-container.swiper-container--visible.js-banner
+        .swiper-wrapper
+          .swiper-slide
+            +main-bunner()
+          .swiper-slide
+            +main-bunner()
+          .swiper-slide
+            +main-bunner()
+        .swiper-pagination
+        button.swiper-button.swiper-button--prev.d-none.d-xl-block(type="button")
+          svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M10.6584 1.6831L2 10.3415L10.6584 19" stroke="#3E5268" stroke-width="2")
+        button.swiper-button.swiper-button--next.d-none.d-xl-block(type="button")
+          svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M10.6584 1.6831L2 10.3415L10.6584 19" stroke="#3E5268" stroke-width="2")
+    .content.content--category.content--overflow
+      .container
+        header.content__header
+          h2.title-h.content__title Отечественные упаковочные материаллы и оборудование по лучшим ценам
+        +js-category()
+    .content.content--recommendation.content--gray.content--overflow.content--xs-pb
+      .container
+        header.content__header.d-none.d-xl-block
+          h2.title-h.content__title Когда компанию хочется рекомендовать
+        .content__row.inner-scroll
+          .content__col.content__col--xl-3
+            +advantage({
+                img: 'img/icon/icon-order.svg',
+                title: 'В наличии и под заказ',
+                desc: 'Более 20 000 единиц товаров в наличии. Производство под заказ — в срок от 5– до 7 дней в зависимости от наименования',
+            })
+          .content__col.content__col--xl-3
+            +advantage({
+                img: 'img/icon/icon-delevery.svg',
+                title: 'Доставка по России',
+                desc: 'Бесплптная доставка по Уфе в день заказа. Качественная организация логистики по России по минимальным ставкам',
+            })
+          .content__col.content__col--xl-3
+            +advantage({
+                img: 'img/icon/icon-point.svg',
+                title: 'Удобная локация',
+                desc: 'Наши склады расположены вблизи развязок всех федеральных трасс, что позваляет сократить расходы на доставку',
+            })
+          .content__col.content__col--xl-3
+            +advantage({
+                img: 'img/icon/icon-doc.svg',
+                title: 'Особые условия',
+                desc: 'Мы готовы рассмотреть особые условия работы: отсрочка до 30 дней, скидки от объема, документация в день заказа.',
+            })
+    .content.content--product.content--xs-pb
+      .container
+        .filter-group
+          +tab-filter
+            +tab-filter-item('Всё', 'all', true)
+            +tab-filter-item('Популярные товары', 'advice')
+            +tab-filter-item('Акции', 'new')
+            +tab-filter-item('Новинки', 'sale')
+          .content__row.content__row--xs-6.content__row--col-mb.count-hide
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="advice")
+              +book({
+                  img: '1',
+                  title: 'Мешки полипропеленовые',
+                  price: '2 800',
+                  priceOld: '3 200',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('-35<sub>%</sub>').figure-content--danger
+                +figure-content('ХИТ').figure-content--main
+                +figure-content('NEW').figure-content--warning
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="new")
+              +book({
+                  img: '8',
+                  title: 'Ленторазмотчик для ПП ленты',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('ХИТ').figure-content--main
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="advice")
+              +book({
+                  img: '9',
+                  title: 'Зажимное устройство укороченное',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('NEW').figure-content--warning
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="sale")
+              +book({
+                  img: '10',
+                  title: 'Перчатки рабочие',
+                  price: '2 800',
+                  priceOld: '3 200',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('-35<sub>%</sub>').figure-content--danger
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="advice")
+              +book({
+                  img: '1',
+                  title: 'Мешки полипропеленовые',
+                  price: '2 800',
+                  priceOld: '3 200',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('-35<sub>%</sub>').figure-content--danger
+                +figure-content('ХИТ').figure-content--main
+                +figure-content('NEW').figure-content--warning
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="new")
+              +book({
+                  img: '8',
+                  title: 'Ленторазмотчик для ПП ленты',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('ХИТ').figure-content--main
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="advice")
+              +book({
+                  img: '9',
+                  title: 'Зажимное устройство укороченное',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('NEW').figure-content--warning
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="sale")
+              +book({
+                  img: '10',
+                  title: 'Перчатки рабочие',
+                  price: '2 800',
+                  priceOld: '3 200',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('-35<sub>%</sub>').figure-content--danger
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="advice")
+              +book({
+                  img: '1',
+                  title: 'Мешки полипропеленовые',
+                  price: '2 800',
+                  priceOld: '3 200',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+                +figure-content('-35<sub>%</sub>').figure-content--danger
+                +figure-content('ХИТ').figure-content--main
+                +figure-content('NEW').figure-content--warning
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="new")
+              +book({
+                  img: '2',
+                  title: 'Ленторазмотчик для ПП ленты',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="advice")
+              +book({
+                  img: '3',
+                  title: 'Зажимное устройство укороченное',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+            .content__col.content__col--6.content__col--md-4.content__col--xl-3(data-filter="sale")
+              +book({
+                  img: '4',
+                  title: 'Перчатки рабочие',
+                  price: '2 800',
+                  btns: true,
+                  desc: 'Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;'
+              })
+          button.btn.btn--lighten.btn--s-middle.content__btn-more.js-show-more Показать еще
+    .content.content--gray.content--about
+      .container
+        .about
+          .content__row
+            .content__col.content__col--xl-7
+              section.about__content
+                h2.title-h.about__title Полистэр — это возможность купить упаковочные материалы от производителя за небольшую плату
+                .about__desc
+                  p Суть нашей компании заключается в замещение импортной продукции. Собственное производство и отдел продаж интегрированный внутри компании, позволяют сократить различные издержки, от логистики до полного исключения посредников из цепочки продаж. Таким образом, при соблюдении жесткого контроля качества, согласно ГОСТу и ТУ, мы добиваемся более конкурентного предложения на рынке упаковочных материалов и оборудования.
+            .about__img
+              .about__name
+                strong.about__name-full Фирюза Насхутдинова
+                p.about__name-position Оснаватель компании
+              img(src="img/content/img-director.png", alt="Фирюза Насхутдинова Оснаватель компании")
+    .content.content--company.content--overflow
+      .container
+        .company
+          header.content__header.company__header
+            h2.title-h.content__mb-mini Вы в хорошей компании
+            p.content__subtitle Познакомьтесь с отзывами наших клиентов
+          .swiper-container.company__slider.js-slider-review.swiper-container--visible
+            .swiper-wrapper
+              .swiper-slide
+                +review({
+                  img: 1,
+                  name: 'Марина Иванова',
+                  company: '«ООО НГПЗ-СТРОЙ»',
+                  text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
+                  video: true
+                })
+              .swiper-slide
+                +review({
+                  img: 2,
+                  name: 'Денис Кравчук',
+                  company: '«ООО ГАЗПРОМ»',
+                  text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
+                  video: false
+                })
+              .swiper-slide
+                +review({
+                    img: 1,
+                    name: 'Марина Иванова',
+                    company: '«ООО НГПЗ-СТРОЙ»',
+                    text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
+                    video: true
+                })
+            button.swiper-button-circle.swiper-button-circle--prev(type="button")
+              svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+            button.swiper-button-circle.swiper-button-circle--next(type="button")
+              svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+    +content-sert().content--gray.content--sert
+    .content.content--news.content--xs-pb0
+      .container
+        .company
+          header.content__header.company__header
+            h2.title-h.content__title Новости
+          .content__row.content__mb.inner-scroll
+            .content__col.content__col--xl-4
+              +preview({
+
+                title: 'Заголовок записи',
+                data: 'новости',
+              })
+            .content__col.content__col--xl-4
+              +preview({
+
+                title: 'Заголовок записи',
+                data: 'новости',
+              })
+            .content__col.content__col--xl-4
+              +preview({
+
+                title: 'Заголовок записи',
+                data: 'обзоры',
+              })
+          footer.content__footer.content__footer--xl-right
+            a.btn.btn--light-b.content__btn-all(href="news.html") смотреть все
+              svg.btn__icon.btn__icon--left(width="9" height="10")
+                use(href="img/symbols.svg#icon-arrow-right")
+block footer
+  +page-footer()
+  +modal('modal-category').modal--w-big.modal--color
+    .content
+      header.modal__header.modal__header--no-line.modal__header--ident
+        span.close.modal__close(data-fancybox-close='', aria-label='Закрыть') #[span]
+        h2.modal__title.modal__title--medium
+          a(href="catalog-single.html") Show punto batİk design
+      .baron.modal__baron
+        .baron__rel
+          .baron__track
+            .baron__free
+              .baron__bar
+          .baron__scroller
+            .content__row.content__row--xs-6.content__row--col-mb
+              .content__col.content__col--6.content__col--md-4.content__col--xl-2_10
+                +product-preview('6353')
+

@@ -1,0 +1,35 @@
+.figure-content {
+  display: block;
+  font-family: 'BebasNeue', 'Arial', sans-serif;
+  width: 30px;
+  height: 21px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+
+  &--danger {
+    background-color: #F44521;
+  }
+
+  &--main {
+    background-color: #015DED;
+  }
+
+  &--warning {
+    background-color: #FBD826;
+  }
+
+  sub {
+    bottom: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 33px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+  }
+}

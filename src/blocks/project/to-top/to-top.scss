@@ -1,0 +1,32 @@
+.to-top__btn {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 19px;
+  color: #9DB4CA;
+  cursor: pointer;
+}
+
+.to-top__btn-text {
+  margin-right: 15px;
+}
+
+.to-top__btn-arrow {
+  position: relative;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  transform: rotate(-90deg);
+  background: $white;
+  border: 0.5px solid #CCDCEC;
+  box-shadow: 1px 2px 7px rgba(204, 220, 236, 0.5);
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+  }
+}
