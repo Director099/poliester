@@ -53,6 +53,10 @@
 
 .page-footer__nav-wrap {
   padding-top: 40px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 40px;
+  }
 }
 
 .page-footer__develop {

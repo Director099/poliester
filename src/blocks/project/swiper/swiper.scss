@@ -2,6 +2,12 @@
   overflow: visible;
 }
 
+.swiper-container--xs-visible {
+  @media (max-width: $screen-xl - 1) {
+    overflow: visible;
+  }
+}
+
 .swiper-button {
   position: absolute;
   bottom: 0;
@@ -139,4 +145,16 @@
   @media (min-width: $screen-xl) {
     bottom: 20px;
   }
+}
+
+.js-slider-review .swiper-slide {
+   @media (max-width: $screen-xl - 1) {
+     max-width: 264px;
+   }
+}
+
+.js-slider-sert .swiper-slide {
+   @media (max-width: $screen-xl - 1) {
+     width: auto;
+   }
 }

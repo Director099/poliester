@@ -152,6 +152,7 @@
 (function () {
   var sliderReview = new Swiper('.js-slider-review', {
     spaceBetween: 16,
+    slidesPerView: 'auto',
     navigation: {
       nextEl: '.swiper-button--next',
       prevEl: '.swiper-button--prev',
@@ -172,6 +173,9 @@
 (function () {
   var sliderReview = new Swiper('.js-slider-sert', {
     spaceBetween: 16,
+    slidesPerView: 'auto',
+
+    freeMode: true,
     navigation: {
       nextEl: '.swiper-button--next',
       prevEl: '.swiper-button--prev',

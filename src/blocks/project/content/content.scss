@@ -25,16 +25,21 @@
   }
 
   &--company {
-    margin-bottom: 100px;
+    margin-bottom: 65px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 100px;
+    }
   }
 
   &--sert {
     padding-top: 35px;
-    padding-bottom: 58px;
+    padding-bottom: 55px;
 
     background-image: url("../img/decor/ellipse-circle-sert.png");
     background-repeat: no-repeat;
     background-position: center right;
+    margin-bottom: 63px;
 
     @media (min-width: $screen-xl) {
       padding-top: 50px;
@@ -71,9 +76,15 @@
     }
   }
 
-  @media (min-width: $screen-xl) {
-    &--news {
-      margin-bottom: 48px;
+  &--news {
+    margin-bottom: 0;
+    padding-bottom: 65px;
+    background-image: url("../img/decor/ellipse-circle-news.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    @media (min-width: $screen-xl) {
+      padding-bottom: 48px;
+      margin-bottom: 0;
     }
   }
 

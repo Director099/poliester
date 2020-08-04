@@ -1,8 +1,13 @@
 .sert {
   display: block;
   padding-bottom: 7px;
+  max-width: 208px;
 
   img {
     box-shadow: 1px 2px 7px rgba(204, 220, 236, 0.5);
+  }
+
+  @media (min-width: $screen-xl) {
+    max-width: inherit;
   }
 }

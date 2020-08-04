@@ -5,17 +5,19 @@ mixin page-footer()
         .container
           .page-footer__row
             .page-footer__col.page-footer__col--xl-3
-              .footer-nav
+              .footer-nav.footer-nav--xs-ident
                 ul.footer-nav__list
-                  li.footer-nav__item.footer-nav__item--ident
+                  li.footer-nav__item.footer-nav__item--ident.footer-nav__link--xs-link.d-xl-none
+                    a.footer-nav__link.footer-nav__link--title(href="catalog.html") Каталог
+                  li.footer-nav__item.footer-nav__item--ident.footer-nav__link--xs-link
                     a.footer-nav__link.footer-nav__link--title(href="#") О компании
-                  li.footer-nav__item.footer-nav__item--ident
+                  li.footer-nav__item.footer-nav__item--ident.footer-nav__link--xs-link
                     a.footer-nav__link.footer-nav__link--title(href="#") Доставка
-                  li.footer-nav__item.footer-nav__item--ident
+                  li.footer-nav__item.footer-nav__item--ident.footer-nav__link--xs-link
                     a.footer-nav__link.footer-nav__link--title(href="#") Партнерам
-                  li.footer-nav__item.footer-nav__item--ident
+                  li.footer-nav__item.footer-nav__item--ident.footer-nav__link--xs-link
                     a.footer-nav__link.footer-nav__link--title(href="#") Новости
-                  li.footer-nav__item.footer-nav__item--ident
+                  li.footer-nav__item.footer-nav__item--ident.footer-nav__link--xs-link
                     a.footer-nav__link.footer-nav__link--title(href="#") Контакты
             .page-footer__col.page-footer__col--xl-3
               +footer-nav('Контактная информация', 'footer-nav__title--ident')
@@ -35,7 +37,7 @@ mixin page-footer()
                       use(xlink:href="img/symbols.svg#icon-whatapp")
                     | +7 (927) 236-56-99
             .page-footer__col.page-footer__col--xl-3
-              +footer-nav(' ', 'footer-nav__title--ident')
+              +footer-nav(' ', 'footer-nav__title--ident d-none d-xl-block')
                 li.footer-nav__item.footer-nav__item--ident
                   span.footer-nav__link.footer-nav__link--size
                     svg(width="13" height="20")
@@ -49,7 +51,7 @@ mixin page-footer()
             .page-footer__col.page-footer__col--xl-3
               .footer-nav.footer-nav--xl-right.page-footer__nav-wrap
                 a.btn.btn--s-middle.btn--tr.btn--b-main.footer-nav__btn(href="#") Обсудить особые условия
-                +to-top('footer-nav__btn-right')
+                +to-top('footer-nav__btn-right').d-none.d-xl-block
       .page-footer__line.page-footer__line--pb.d-none.d-xl-block
         .container
           .page-footer__row

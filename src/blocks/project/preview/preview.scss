@@ -2,9 +2,14 @@
   display: block;
   text-decoration: none;
   color: $text-color;
-  padding: 18px 20px 20px;
+  padding: 18px 16px 20px;
   border: 1px solid #CCDCEC;
   border-radius: 16px;
+  background-color: $white;
+
+  @media (min-width: $screen-xl) {
+    padding: 18px 20px 20px;
+  }
 }
 
 .preview__img {
@@ -19,19 +24,27 @@
 
 .preview__title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   margin-bottom: 8px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 16px;
+  }
 }
 
 .preview__desc {
   max-width: 250px;
   font-size: 12px;
   line-height: 19px;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
 
   p {
     margin: 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 17px;
   }
 }
 

@@ -3,12 +3,23 @@
 }
 
 .about__title {
+  position: relative;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   padding-bottom: 33px;
   margin-bottom: 25px;
   padding-left: 83px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    right: -15px;
+    height: 1px;
+    background-color: #CCDCEC;
+  }
 
   @media (min-width: $screen-xl) {
     font-size: 24px;

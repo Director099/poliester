@@ -1,15 +1,17 @@
 .review {
   text-align: center;
-  padding: 0 16px 16px;
-  min-height: 282px;
+  padding: 0 15px 27px;
 
+  margin-top: 50px;
+  border-radius: 5px;
   border: 1px solid #CCDCEC;
-  border-radius: 16px;
   background: url("../img/decor/decor-quote.png") no-repeat bottom left;
 
   @media (min-width: $screen-xl) {
     padding: 40px 35px 40px 40px;
     text-align: left;
+    min-height: 282px;
+    border-radius: 16px;
   }
 }
 
@@ -50,9 +52,14 @@
 }
 
 .review__desc {
-  font-size: 14px;
-  line-height: 23px;
-  margin-bottom: 30px;
+  line-height: 18px;
+  margin-bottom: 15px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 30px;
+  }
 
   p {
     &:last-child {
@@ -63,9 +70,17 @@
 
 .review__name {
   display: block;
+  font-size: 14px;
+  line-height: 19px;
   font-weight: 600;
-  margin-bottom: 11px;
+  margin-bottom: 6px;
   color: #0054D7;
+
+  @media (min-width: $screen-xl) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 11px;
+  }
 }
 
 .review__company {

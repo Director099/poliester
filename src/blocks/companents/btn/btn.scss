@@ -120,6 +120,10 @@ $border-radius: 5px !default;
     padding-left: 7px;
     padding-right: 7px;
     font-weight: 400;
+
+    @media (min-width: $screen-xl) {
+      line-height: 14px;
+    }
   }
 
   &--white-b {
