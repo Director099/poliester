@@ -10,6 +10,7 @@
   padding-bottom: 33px;
   margin-bottom: 25px;
   padding-left: 83px;
+  min-height: 109px;
 
   &:after {
     content: '';
@@ -25,7 +26,13 @@
     font-size: 24px;
     line-height: 33px;
     margin-bottom: 30px;
+    padding-bottom: 0;
     padding-left: 0;
+    min-height: auto;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

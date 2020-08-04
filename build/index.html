@@ -304,12 +304,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="swiper-button-circle swiper-button-circle--prev" type="button">
+                                <button class="swiper-button-circle swiper-button-circle--prev" type="button" id="cat-prev">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D"></path>
                                     </svg>
                                 </button>
-                                <button class="swiper-button-circle swiper-button-circle--next" type="button">
+                                <button class="swiper-button-circle swiper-button-circle--next" type="button" id="cat-next">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D"></path>
                                     </svg>
@@ -710,49 +710,51 @@
                                 <h2 class="title-h content__mb-mini">Вы в хорошей компании</h2>
                                 <p class="content__subtitle">Познакомьтесь с отзывами наших клиентов</p>
                             </header>
-                            <div class="swiper-container company__slider js-slider-review swiper-container--xs-visible">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="review">
-                                            <div class="review__row"><a class="review__img review__img--play" href="https://www.youtube.com/watch?v=zO5Yy5dDWsM" data-fancybox=""><img src="img/content/people-1.jpg" alt="Марина Иванова" /></a>
-                                                <div class="review__content">
-                                                    <div class="review__desc">
-                                                        <p>Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом</p>
-                                                    </div><strong class="review__name">Марина Иванова</strong><span class="review__company">«ООО НГПЗ-СТРОЙ»</span>
+                            <div class="swiper-container-relative">
+                                <div class="swiper-container company__slider js-slider-review swiper-container--xs-visible">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__row"><a class="review__img review__img--play" href="https://www.youtube.com/watch?v=zO5Yy5dDWsM" data-fancybox=""><img src="img/content/people-1.jpg" alt="Марина Иванова" /></a>
+                                                    <div class="review__content">
+                                                        <div class="review__desc">
+                                                            <p>Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом</p>
+                                                        </div><strong class="review__name">Марина Иванова</strong><span class="review__company">«ООО НГПЗ-СТРОЙ»</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="review">
-                                            <div class="review__row">
-                                                <div class="review__img"><img src="img/content/people-2.jpg" alt="Денис Кравчук" /></div>
-                                                <div class="review__content">
-                                                    <div class="review__desc">
-                                                        <p>Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом</p>
-                                                    </div><strong class="review__name">Денис Кравчук</strong><span class="review__company">«ООО ГАЗПРОМ»</span>
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__row">
+                                                    <div class="review__img"><img src="img/content/people-2.jpg" alt="Денис Кравчук" /></div>
+                                                    <div class="review__content">
+                                                        <div class="review__desc">
+                                                            <p>Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом</p>
+                                                        </div><strong class="review__name">Денис Кравчук</strong><span class="review__company">«ООО ГАЗПРОМ»</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="review">
-                                            <div class="review__row"><a class="review__img review__img--play" href="https://www.youtube.com/watch?v=zO5Yy5dDWsM" data-fancybox=""><img src="img/content/people-1.jpg" alt="Марина Иванова" /></a>
-                                                <div class="review__content">
-                                                    <div class="review__desc">
-                                                        <p>Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом</p>
-                                                    </div><strong class="review__name">Марина Иванова</strong><span class="review__company">«ООО НГПЗ-СТРОЙ»</span>
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__row"><a class="review__img review__img--play" href="https://www.youtube.com/watch?v=zO5Yy5dDWsM" data-fancybox=""><img src="img/content/people-1.jpg" alt="Марина Иванова" /></a>
+                                                    <div class="review__content">
+                                                        <div class="review__desc">
+                                                            <p>Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом</p>
+                                                        </div><strong class="review__name">Марина Иванова</strong><span class="review__company">«ООО НГПЗ-СТРОЙ»</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="swiper-button-circle swiper-button-circle--prev" type="button">
+                                <button class="swiper-button-circle swiper-button-circle--prev" type="button" id="rev-prev">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D"></path>
                                     </svg>
                                 </button>
-                                <button class="swiper-button-circle swiper-button-circle--next" type="button">
+                                <button class="swiper-button-circle swiper-button-circle--next" type="button" id="rev-next">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D"></path>
                                     </svg>
@@ -768,18 +770,23 @@
                                 <h2 class="title-h content__mb-mini">Сертификаты соответствия</h2>
                                 <p class="content__subtitle">Жесткий контроль качества согласно ГОСТу и ТУ</p>
                             </header>
-                            <div class="swiper-container company__slider js-slider-sert swiper-container--xs-visible">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><a class="sert" href="img/content/sert-1.jpg" data-fancybox=""><img src="img/content/sert-1.jpg" alt="Сертификат" /></a></div>
-                                    <div class="swiper-slide"><a class="sert" href="img/content/sert-2.jpg" data-fancybox=""><img src="img/content/sert-2.jpg" alt="Сертификат" /></a></div>
-                                    <div class="swiper-slide"><a class="sert" href="img/content/sert-3.jpg" data-fancybox=""><img src="img/content/sert-3.jpg" alt="Сертификат" /></a></div>
+                            <div class="swiper-container-relative">
+                                <div class="swiper-container company__slider js-slider-sert swiper-container--xs-visible">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><a class="sert" href="img/content/sert-1.jpg" data-fancybox=""><img src="img/content/sert-1.jpg" alt="Сертификат" /></a></div>
+                                        <div class="swiper-slide"><a class="sert" href="img/content/sert-2.jpg" data-fancybox=""><img src="img/content/sert-2.jpg" alt="Сертификат" /></a></div>
+                                        <div class="swiper-slide"><a class="sert" href="img/content/sert-3.jpg" data-fancybox=""><img src="img/content/sert-3.jpg" alt="Сертификат" /></a></div>
+                                        <div class="swiper-slide"><a class="sert" href="img/content/sert-1.jpg" data-fancybox=""><img src="img/content/sert-1.jpg" alt="Сертификат" /></a></div>
+                                        <div class="swiper-slide"><a class="sert" href="img/content/sert-2.jpg" data-fancybox=""><img src="img/content/sert-2.jpg" alt="Сертификат" /></a></div>
+                                        <div class="swiper-slide"><a class="sert" href="img/content/sert-3.jpg" data-fancybox=""><img src="img/content/sert-3.jpg" alt="Сертификат" /></a></div>
+                                    </div>
                                 </div>
-                                <button class="swiper-button-circle swiper-button-circle--prev" type="button">
+                                <button class="swiper-button-circle swiper-button-circle--prev" type="button" id="sert-prev">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D"></path>
                                     </svg>
                                 </button>
-                                <button class="swiper-button-circle swiper-button-circle--next" type="button">
+                                <button class="swiper-button-circle swiper-button-circle--next" type="button" id="sert-next">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D"></path>
                                     </svg>
@@ -964,7 +971,9 @@
                 </div>
                 <div class="page-footer__bottom">
                     <div class="container">
-                        <p class="page-footer__copyright">© 2013 ООО «Полистэр Уфа» <br/> <br/>  Производство и продажа упаковочных материалов и оборудования оптом</p><a class="develop page-footer__develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
+                        <div class="page-footer__copyright-wrap">
+                            <p class="page-footer__copyright">© 2013 ООО «Полистэр Уфа» <br/> <br/>  Производство и продажа упаковочных материалов и оборудования оптом</p>
+                        </div><a class="develop page-footer__develop" href="https://pplans.ru/" target="_blank"><img src="img/icon/develop.svg" alt="Разработка сайтов. Продвижение. Брендинг | People Plans" /></a>
                     </div>
                 </div>
             </footer>

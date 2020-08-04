@@ -6,9 +6,11 @@
   }
 
   &--xs-ident {
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-bottom: 48px;
+    @media (max-width: $screen-xl - 1) {
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-bottom: 48px;
+    }
   }
 }
 

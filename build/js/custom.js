@@ -58,10 +58,6 @@
 (function () {
   let swiper = new Swiper('.js-banner', {
     loop: true,
-    navigation: {
-      nextEl: '.swiper-button--next',
-      prevEl: '.swiper-button--prev',
-    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -86,8 +82,8 @@
   let swiper = new Swiper('.js-category', {
     slidesPerView: 'auto',
     navigation: {
-      nextEl: '.swiper-button-circle--next',
-      prevEl: '.swiper-button-circle--prev',
+      nextEl: '#cat-next',
+      prevEl: '#cat-prev',
     },
     breakpoints: {
       1200: {
@@ -149,13 +145,14 @@
  * @description галлерея отзывы
  */
 
+
 (function () {
   var sliderReview = new Swiper('.js-slider-review', {
     spaceBetween: 16,
     slidesPerView: 'auto',
     navigation: {
-      nextEl: '.swiper-button--next',
-      prevEl: '.swiper-button--prev',
+      nextEl: '#rev-next',
+      prevEl: '#rev-prev',
     },
     breakpoints: {
       1200: {
@@ -167,6 +164,47 @@
 })();
 
 /**
+ * @description Похожие товары
+ */
+
+(function () {
+  var sliderSimilar = new Swiper('.js-similar', {
+    slidesPerView: 'auto',
+    navigation: {
+      nextEl: '#similar-next',
+      prevEl: '#similar-prev',
+    },
+    breakpoints: {
+      1200: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      }
+    }
+  });
+})();
+
+/**
+ * @description Сопутствующие товары
+ */
+
+(function () {
+  var sliderSimilar = new Swiper('.js-related', {
+    slidesPerView: 'auto',
+    navigation: {
+      nextEl: '#related-next',
+      prevEl: '#related-prev',
+    },
+    breakpoints: {
+      1200: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      }
+    }
+  });
+})();
+
+
+/**
  * @description галлерея сертификат
  */
 
@@ -174,14 +212,14 @@
   var sliderReview = new Swiper('.js-slider-sert', {
     spaceBetween: 16,
     slidesPerView: 'auto',
-
     freeMode: true,
     navigation: {
-      nextEl: '.swiper-button--next',
-      prevEl: '.swiper-button--prev',
+      nextEl: '#sert-next',
+      prevEl: '#sert-prev',
     },
     breakpoints: {
       1200: {
+        freeMode: false,
         spaceBetween: 30,
         slidesPerView: 4,
       }

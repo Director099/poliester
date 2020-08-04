@@ -130,14 +130,12 @@ $border-radius: 5px !default;
     color: $white;
     background-color: transparent;
     border: 1px solid $white;
-    //
-    //&:hover,
-    //&:focus {
-    //  color: #fff;
-    //  background-color: #566DFB;
-    //  border: 1px solid #566DFB;
-    //  box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
-    //}
+  }
+
+  &--main-b {
+    color: $color-main;
+    background-color: transparent;
+    border: 1px solid $color-main;
   }
 
   &--main {
@@ -161,8 +159,31 @@ $border-radius: 5px !default;
     border-bottom: 1px dashed #34A5E6;
   }
 
+  &--more {
+    position: relative;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: #0054D7;
+    border-radius: 0;
+    padding-left: 20px;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 45%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid #0054D7;
+      border-bottom: 2px solid #0054D7;
+      transform: rotate(45deg) translateY(-50%);
+    }
+  }
+
   &--s-middle {
-    padding: 12.5px 27.5px;
+    padding: 8.5px 27.5px;
   }
 
   &--s-big {

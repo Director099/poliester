@@ -1,0 +1,47 @@
+.table-char {
+  @include ul-none;
+  position: relative;
+  max-height: 222px;
+  overflow: hidden;
+  transition: $time;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 23px;
+  color: $text-color;
+}
+
+.table-char::after,
+.table-char__item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0
+}
+
+.table-char span {
+  position: relative;
+  background: #fff;
+  z-index: 1;
+
+  &:first-child {
+    padding-right: 7px;
+  }
+
+  &:last-child {
+    padding-left: 7px;
+  }
+}
+
+.table-char__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px
+}
+
+.table-char__item::after {
+  bottom: 6px;
+  z-index: 0;
+  border-bottom: 1px dashed #95AABE;
+}

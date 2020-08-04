@@ -33,9 +33,25 @@
 
   &--black {
     color: $text-color;
+
+    &::after {
+      background: currentColor;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
   }
 }
 
 .card-tab__link.active {
   color: $color-main;
+  &::after {
+    background: currentColor;
+  }
 }

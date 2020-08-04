@@ -202,36 +202,37 @@ block content
           header.content__header.company__header
             h2.title-h.content__mb-mini Вы в хорошей компании
             p.content__subtitle Познакомьтесь с отзывами наших клиентов
-          .swiper-container.company__slider.js-slider-review.swiper-container--xs-visible
-            .swiper-wrapper
-              .swiper-slide
-                +review({
-                  img: 1,
-                  name: 'Марина Иванова',
-                  company: '«ООО НГПЗ-СТРОЙ»',
-                  text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
-                  video: true
-                })
-              .swiper-slide
-                +review({
-                  img: 2,
-                  name: 'Денис Кравчук',
-                  company: '«ООО ГАЗПРОМ»',
-                  text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
-                  video: false
-                })
-              .swiper-slide
-                +review({
+          .swiper-container-relative
+            .swiper-container.company__slider.js-slider-review.swiper-container--xs-visible
+              .swiper-wrapper
+                .swiper-slide
+                  +review({
                     img: 1,
                     name: 'Марина Иванова',
                     company: '«ООО НГПЗ-СТРОЙ»',
                     text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
                     video: true
-                })
-            button.swiper-button-circle.swiper-button-circle--prev(type="button")
+                  })
+                .swiper-slide
+                  +review({
+                    img: 2,
+                    name: 'Денис Кравчук',
+                    company: '«ООО ГАЗПРОМ»',
+                    text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
+                    video: false
+                  })
+                .swiper-slide
+                  +review({
+                      img: 1,
+                      name: 'Марина Иванова',
+                      company: '«ООО НГПЗ-СТРОЙ»',
+                      text: 'Разнообразный и богатый опыт консультация с широким активом способствует подготовки и реализации систем массового участия. Равным образом консультация с широким активом',
+                      video: true
+                  })
+            button.swiper-button-circle.swiper-button-circle--prev(type="button" id="rev-prev")
               svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
                 path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
-            button.swiper-button-circle.swiper-button-circle--next(type="button")
+            button.swiper-button-circle.swiper-button-circle--next(type="button" id="rev-next")
               svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
                 path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
     +content-sert().content--gray.content--sert.content--overflow

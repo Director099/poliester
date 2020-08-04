@@ -9,6 +9,7 @@
 
   &--static {
     position: static;
+    background-color: $color-main2;
     margin-bottom: 40px;
   }
 }
@@ -21,6 +22,7 @@
   @media (min-width: $screen-xl) {
     padding-top: 14px;
     padding-bottom: 14px;
+    border-bottom: 1px solid rgba(#CCDCEC, 0.5);
   }
 }
 
