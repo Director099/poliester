@@ -83,10 +83,12 @@ $transition-time:             0.3s !default;
 
       &:before {
         transform: rotate3d(0, 0, 1, 45deg);
+        background-color: $color-warning;
       }
 
       &:after {
         transform: rotate3d(0, 0, 1, -45deg);
+        background-color: $color-warning;
       }
     }
   }

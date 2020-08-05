@@ -1,0 +1,70 @@
+mixin menu-phone(src)
+  .mb-menu(id="menu-phone", tabindex='-1', role='dialog')
+    .mb-menu__dialog
+      header.page-header.page-header--static.page-header--mb0
+        .page-header__top
+          .container
+            .page-header__row.page-header__row--sb.page-header__row--ai-c
+              +burger('Открыте меню').page-header__menu.js-menu.d-xl-none
+              .page-header__logo
+                +logo('/')
+                  img(src='img/icon/logo.svg', alt='Продажа упаковочных материалов и оборудования от производителя', width='129', height='46')
+                  p Продажа упаковочных материалов и оборудования от производителя
+              .page-header__info
+                +burger('Закрыть меню')(data-fancybox-close="").burger--close
+      .mb-menu__navigation
+        .container
+          nav.navigation
+            .mb-product
+              header.mb-product__header
+                h3.mb-product__title ПОЗВОНИТЬ
+              a.mb-product__title(href="tel:+7(347)246–22–58") +7 (347) 246–22–58 #[span Звоните с 8:00 до 18:00]
+              a.mb-product__title(href="tel:+7(347)246–22–58") +7 (347) 246–22–58 #[span Примеание]
+              a.mb-product__title(href="tel:+7(347)246–22–58") +7 (347) 246–22–58 #[span Примеание]
+              header.mb-product__header
+                h3.mb-product__title ЗАКАЗАТЬ ЗВОНОК
+              form.form.mb-menu__form
+                .mb-menu__group
+                  +field-text({
+                      title: 'Ф.И.О. <span>*</span>',
+                      mods: '',
+                      val: '',
+                      attrs: {
+                          name: 'name',
+                          required: '',
+                      }
+                  })
+                .mb-menu__group
+                  +field-text({
+                      title: 'Телефон <span>*</span>',
+                      mods: '',
+                      val: '',
+                      attrs: {
+                          type: 'tel',
+                          name: 'phone',
+                          required: '',
+                      }
+                  })
+                .mb-menu__group
+                  +field-text({
+                      title: 'Комментарий <small>не обязательно</small>',
+                      isTextarea: true,
+                      mods: '',
+                      val: '',
+                      attrs: {
+                          name: 'comment',
+                      }
+                  })
+                .mb-menu__group
+                  +field-checkbox([
+                      {
+                          title: 'Я согласен на <a href="#">обработку персональных данных</a>',
+                          attrs: {
+                              name: 'check0',
+                              checked: '',
+                              required: '',
+                          }
+                      },
+                  ])
+                button.btn.btn--s-middle.btn--main Заказать звонок
+

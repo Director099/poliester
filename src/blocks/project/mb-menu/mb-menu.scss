@@ -12,7 +12,7 @@
 
 .mb-menu__dialog {
   height: 100%;
-  background: linear-gradient(180deg, #FEFEFE 0%, #FAFAFA 100%);
+  //background: linear-gradient(180deg, #FEFEFE 0%, #FAFAFA 100%);
 }
 
 .mb-menu__header {
@@ -138,4 +138,24 @@
 
 .mb-menu .fancybox-button {
   display: none;
+}
+
+.mb-menu__arrow {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  padding: 0;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.mb-menu__form {
+  padding: 20px 16px 26px;
+}
+
+.mb-menu__group {
+  margin-bottom: 24px;
 }

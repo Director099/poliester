@@ -12,9 +12,11 @@
 
 @import "../blocks/companents/page/page";
 @import "../blocks/companents/btn/btn";
+@import "../blocks/companents/menu/menu";
 @import "../blocks/companents/container/container";
 @import "../blocks/companents/logo/logo";
 @import "../blocks/companents/field-text/field-text";
+@import "../blocks/companents/field-select/field-select";
 @import "../blocks/companents/title-h/title-h";
 @import "../blocks/companents/burger/burger";
 @import "../blocks/companents/breadcrumbs/breadcrumbs";
@@ -133,7 +135,6 @@
   display: inline-block;
   padding: 0;
   border: 0;
-  margin-left: 23px;
   cursor: pointer;
 
   svg {

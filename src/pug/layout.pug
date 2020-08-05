@@ -55,6 +55,193 @@ html(class='page', lang='ru')
         block footer
           p «подвал»
     +mb-menu()
+    +mb-menu-catalog()
+    +mb-menu-subcatalog()
+    +menu-phone()
+    +modal('modal-cb', 'Заказать звонок').modal--width
+      .modal__body
+        form.form
+          .modal__group.modal__group--mb-mini
+            +field-text({
+                title: 'Ф.И.О. <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'name',
+                    required: '',
+                }
+            })
+          .modal__group.modal__group--mb-middle
+            +field-text({
+                title: 'Телефон <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    type: 'tel',
+                    name: 'phone',
+                    required: '',
+                }
+            })
+          .modal__group
+            +field-text({
+                title: 'Комментарий <small>не обязательно</small>',
+                isTextarea: true,
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'comment',
+                }
+            })
+          .modal__group
+            +field-checkbox([
+                {
+                    title: 'Я согласен на <a href="#">обработку персональных данных</a>',
+                    attrs: {
+                        name: 'check0',
+                        checked: '',
+                        required: '',
+                    }
+                },
+            ])
+          button.btn.btn--s-middle.btn--main Заказать звонок
+    +modal('modal-terms', 'Обсудить особые условия').modal--width
+      .modal__body
+        form.form
+          .modal__group.modal__group--mb-mini
+            +field-text({
+                title: 'Ф.И.О. <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'name',
+                    required: '',
+                }
+            })
+          .modal__group.modal__group--mb-middle
+            +field-text({
+                title: 'Телефон <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    type: 'tel',
+                    name: 'phone',
+                    required: '',
+                }
+            })
+          .modal__group
+            +field-text({
+                title: 'Комментарий <small>не обязательно</small>',
+                isTextarea: true,
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'comment',
+                }
+            })
+          .modal__group
+            +field-checkbox([
+                {
+                    title: 'Я согласен на <a href="#">обработку персональных данных</a>',
+                    attrs: {
+                        name: 'check0',
+                        checked: '',
+                        required: '',
+                    }
+                },
+            ])
+          button.btn.btn--s-middle.btn--main Обсудить особые условия
+    +modal('modal-terms', 'Запросить образец').modal--width
+      .modal__body
+        form.form
+          .modal__group.modal__group--mb-mini
+            +field-text({
+                title: 'Ф.И.О. <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'name',
+                    required: '',
+                }
+            })
+          .modal__group.modal__group--mb-middle
+            +field-text({
+                title: 'Телефон <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    type: 'tel',
+                    name: 'phone',
+                    required: '',
+                }
+            })
+          .modal__group
+            +field-text({
+                title: 'Комментарий <small>не обязательно</small>',
+                isTextarea: true,
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'comment',
+                }
+            })
+          .modal__group
+            +field-checkbox([
+                {
+                    title: 'Я согласен на <a href="#">обработку персональных данных</a>',
+                    attrs: {
+                        name: 'check0',
+                        checked: '',
+                        required: '',
+                    }
+                },
+            ])
+          button.btn.btn--s-middle.btn--main Запросить образец
+    +modal('modal-order', 'Обсудить заказ').modal--width
+      .modal__body
+        form.form
+          .modal__group.modal__group--mb-mini
+            +field-text({
+                title: 'Ф.И.О. <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'name',
+                    required: '',
+                }
+            })
+          .modal__group.modal__group--mb-middle
+            +field-text({
+                title: 'Телефон <span>*</span>',
+                mods: '',
+                val: '',
+                attrs: {
+                    type: 'tel',
+                    name: 'phone',
+                    required: '',
+                }
+            })
+          .modal__group
+            +field-text({
+                title: 'Комментарий <small>не обязательно</small>',
+                isTextarea: true,
+                mods: '',
+                val: '',
+                attrs: {
+                    name: 'comment',
+                }
+            })
+          .modal__group
+            +field-checkbox([
+                {
+                    title: 'Я согласен на <a href="#">обработку персональных данных</a>',
+                    attrs: {
+                        name: 'check0',
+                        checked: '',
+                        required: '',
+                    }
+                },
+            ])
+          button.btn.btn--s-middle.btn--main Обсудить заказ
     script(src='libs/jquery/dist/jquery.min.js')
     script(src="libs/swiper/swiper-bundle.min.js")
     script(src='libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js')

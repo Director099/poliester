@@ -1,32 +1,15 @@
 mixin page-header(mod)
   header.page-header(class=`${!mod ? 'page-header--static' : ''}`)
     .page-header__top
-      .curtain(id="phone")
-        .curtain__item.curtain__item--row
-          span.curtain__title Телефоны
-          button.close.curtain__close.js-close-curtain(aria-label="Закрыть меню" type="button")
-            span
-        .curtain__item
-          a.curtain__phone(href="tel:+7(347)258–91–89")
-            span.curtain__p-number +7 (347) 258–91–89
-            span.curtain__p-text Звоните с 8:00 до 18:00
-        .curtain__item
-          a.curtain__phone(href="tel:+7(347)246–22–58")
-            span.curtain__p-number +7 (347) 246–22–58
-            span.curtain__p-text Примеание
-        .curtain__item
-          a.curtain__phone(href="tel:+7(347)246–22–58")
-            span.curtain__p-number +7 (347) 246–22–58
-            span.curtain__p-text Примеание
       .container
         .page-header__row.page-header__row--sb.page-header__row--ai-c
-          +burger('Показать ничто').page-header__menu.js-menu.d-xl-none
+          +burger('Открыте меню').page-header__menu.js-menu.d-xl-none
           .page-header__logo
             +logo('/')
               img(src='img/icon/logo.svg', alt='Продажа упаковочных материалов и оборудования от производителя', width='129', height='46')
               p Продажа упаковочных материалов и оборудования от производителя
           .page-header__info
-            button.icon-btn.js-show-phone.d-xl-none
+            a.icon-btn.d-xl-none(href="#menu-phone" data-fancybox="")
               svg(width="22" height="22" fill="none")
                 use(xlink:href="img/symbols.svg#icon-phone")
             .d-none.d-xl-block
@@ -51,116 +34,127 @@ mixin page-header(mod)
                   a.navigation__link(href="template-page.html") Новости
                 li.navigation__item
                   a.navigation__link(href="template-page.html") Контакты
-            a.btn.btn--white-b Заказать звонок
-
+            a.btn.btn--white-b(href="#modal-cb" data-fancybox="") Заказать звонок
           .catalog
-            .catalog__row
-              .catalog__col
-                .product-list
-                  h3.product-list__title Все для пряжи
-                  .product-list__group
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Пряжа
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Alize (Ализе)
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Magic
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nako
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Vita
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Vita Cotton
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Color City
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") YarnArt
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Adelia
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nazar
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Kartopu
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Knitka
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Журналы для вязания
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Alize (Ализе)
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Magic
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nako
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Vita
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Vita Cotton
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Color City
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") YarnArt
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Adelia
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nazar
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Kartopu
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Knitka
-              .catalog__col
-                .product-list
-                  h3.product-list__title Швейная фурнитура
-                  .product-list__group
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Иглы и булавки
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Ручные иглы
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Для бытовой машинки
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Для промышленной машинки
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Булавки
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Игольницы и наборы
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Материалы
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Alize (Ализе)
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Magic
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nako
-              .catalog__col
-                .product-list
-                  h3.product-list__title Товары для рукоделия
-                  .product-list__group
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Алмазная мозаика
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Полная выкладка
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Частичная выкладка
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Раскройки  по номерам
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Alize (Ализе)
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Magic
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nako
-                    .product-list__subitem
-                      h4.product-list__subtitle.js-collapse Схемы для вышивки
-                      ul.product-list__list
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Alize (Ализе)
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Magic
-                        li.product-list__item
-                          a.product-list__link(href="catalog.html") Nako
+            .catalog__inner
+              ul.catalog__list
+                li.catalog__item
+                  a.catalog__link(href="#") Полипропиленовая продукция
+                  ul.catalog__list
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                li.catalog__item
+                  a.catalog__link(href="#") Полипропиленовая продукция
+                  ul.catalog__list
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                li.catalog__item
+                  a.catalog__link(href="#") Оборудование
+                  ul.catalog__list
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                li.catalog__item
+                  a.catalog__link(href="#") Сопутствующие товары
+                  ul.catalog__list
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                    li.catalog__item
+                      a.catalog__link(href="#") Название категории
+                      ul.catalog__list
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара
+                        li.catalog__item
+                          a.catalog__link(href="#") Название товара

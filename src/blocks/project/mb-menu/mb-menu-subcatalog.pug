@@ -1,0 +1,81 @@
+mixin mb-menu-subcatalog(src)
+  .mb-menu(id="menu-subcatalog", tabindex='-1', role='dialog')
+    .mb-menu__dialog
+      header.page-header.page-header--static.page-header--mb0
+        .page-header__top
+          .container
+            .page-header__row.page-header__row--sb.page-header__row--ai-c
+              button.mb-menu__arrow(data-fancybox-close="")
+                svg(width="24" height="16")
+                  use(href="img/symbols.svg#icon-arrow-left")
+              .page-header__logo
+                +logo('/')
+                  img(src='img/icon/logo.svg', alt='Продажа упаковочных материалов и оборудования от производителя', width='129', height='46')
+                  p Продажа упаковочных материалов и оборудования от производителя
+              .page-header__info
+                a.icon-btn.d-xl-none(href="#menu-phone" data-fancybox="")
+                  svg(width="22" height="22" fill="none")
+                    use(xlink:href="img/symbols.svg#icon-phone")
+      .mb-menu__navigation
+        .container
+          nav.navigation
+            +mb-product({
+                title: 'НАЗВАНИЕ КАТЕГОРИИ',
+                textLink: 'Подкатегория',
+                link: '#catalog'
+            })
+              ul.mb-product__list
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Мешки полипропеленовые
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Биг-бэги (Мягкие контейнера)
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Сетка сеновязальная
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Шпагат сеновязальный
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Нить полипропиленовая
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Лента полипропиленовая
+              h3.mb-product__title.js-collapse Полиэтиленовая продукция
+              ul.mb-product__list
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Мешки полипропеленовые
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Биг-бэги (Мягкие контейнера)
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Сетка сеновязальная
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Шпагат сеновязальный
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Нить полипропиленовая
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Лента полипропиленовая
+              h3.mb-product__title.js-collapse Оборудование
+              ul.mb-product__list
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Мешки полипропеленовые
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Биг-бэги (Мягкие контейнера)
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Сетка сеновязальная
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Шпагат сеновязальный
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Нить полипропиленовая
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Лента полипропиленовая
+              h3.mb-product__title.js-collapse Сопутствующие товары
+              ul.mb-product__list
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Мешки полипропеленовые
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Биг-бэги (Мягкие контейнера)
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Сетка сеновязальная
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Шпагат сеновязальный
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Нить полипропиленовая
+                li.mb-product__item
+                  a.mb-product__link(href="catalog-single.html") Лента полипропиленовая

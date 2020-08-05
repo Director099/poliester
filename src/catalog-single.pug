@@ -37,12 +37,12 @@ block content
                         img(src="img/content/product-1.png")
 
 
-                  button.swiper-button-circle.swiper-button-circle--prev(type="button")
-                    svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
-                  button.swiper-button-circle.swiper-button-circle--next(type="button")
-                    svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+                  //button.swiper-button-circle.swiper-button-circle--prev(type="button")
+                  //  svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  //    path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+                  //button.swiper-button-circle.swiper-button-circle--next(type="button")
+                  //  svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  //    path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
                 .product-card__slide
                   .swiper-container.gallery-top
                     .swiper-wrapper
@@ -67,8 +67,36 @@ block content
                 h1.title-h.title-h--black.product-card__title Биг-бэги (Мягкие контейнера)
                 p.product-card__art Артикул: 237100
                 strong.product-card__price #[sub от] 990, 00 ₽
-                a.btn.btn--main.btn--s-middle(href="#modal-buy", data-fancybox="") Заказать
-                a.btn.btn--main-b.btn--s-middle(href="#modal-buy", data-fancybox="") Обзор товара
+                .product-card__btns
+                  a.btn.btn--main.btn--s-middle(href="#modal-order", data-fancybox="") Заказать
+                  a.btn.btn--main-b.btn--s-middle(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk", data-fancybox="") Обзор товара
+                .product-card__choice
+                  span.product-card__help Количество строп
+                  +dropdown('2-х стропные', 'drop-1', 'left').product-card__drop
+                    .menu
+                      span.menu__item
+                        a.menu__link.js-text(href='') 1-х стропные
+                      span.menu__item
+                        a.menu__link.js-text(href='') 2-х стропные
+                      span.menu__item
+                        a.menu__link.js-text(href='') 3-х стропные
+                .product-card__choice
+                  span.product-card__help Верхняя крышка
+                  +dropdown('Без крышки', 'drop-2', 'left').product-card__drop
+                    .menu
+                      span.menu__item
+                        a.menu__link.js-text(href='') Без крышки
+                      span.menu__item
+                        a.menu__link.js-text(href='') С крышкой
+                .product-card__choice
+                  span.product-card__help Дно
+                  +dropdown('Плоское дно', 'drop-3', 'left').product-card__drop
+                    .menu
+                      span.menu__item
+                        a.menu__link.js-text(href='') Плоское дно
+                      span.menu__item
+                        a.menu__link.js-text(href='') Плотное дно
+
 
           .card-tab
             ul.card-tab__list
@@ -291,49 +319,47 @@ block content
     +content-sert().content--xs-pb.content--overflow
 block footer
   +page-footer()
-  +modal('modal-buy', 'Купить в 1 клик').modal--width
-    .modal__body
-      form.form
-        .modal__group.modal__group--mb-mini
-          +field-text({
-              title: 'Ф.И.О. <span>*</span>',
-              mods: '',
-              val: '',
-              attrs: {
-                  name: 'name',
-                  required: '',
-              }
-          })
-        .modal__group.modal__group--mb-middle
-          +field-text({
-              title: 'Телефон <span>*</span>',
-              mods: '',
-              val: '',
-              attrs: {
-                  type: 'tel',
-                  name: 'phone',
-                  required: '',
-              }
-          })
-        .modal__group
-          +field-text({
-              title: 'Комментарий к заказу',
-              isTextarea: true,
-              mods: '',
-              val: '',
-              attrs: {
-                  name: 'comment',
-              }
-          })
-        .modal__group
-          +field-checkbox([
-          {
-              title: 'Я согласен на <a href="#">обработку персональных данных</a>',
-              attrs: {
-                  name: 'check0',
-                  checked: '',
-                  required: '',
-              }
-            },
-          ])
-        button.btn.btn--s-middle.btn--main Оформить заказ
+  +modal('modal-char', 'Характеристики товара').modal--width-middle
+    .baron.modal__baron
+      .baron__rel
+        .baron__track
+          .baron__free
+            .baron__bar
+        .baron__scroller
+          .modal__body
+            .modal__desc
+              h3 Здесь подставляется название товара
+              ul.table-char
+                li.table-char__item
+                  span Характеристика 1
+                  span Показатель 1
+                li.table-char__item
+                  span Характеристика 2
+                  span Показатель 2
+                li.table-char__item
+                  span Характеристика 3
+                  span Показатель 3
+                li.table-char__item
+                  span Характеристика 4
+                  span Показатель 4
+                li.table-char__item
+                  span Характеристика 5
+                  span Показатель 5
+                li.table-char__item
+                  span Характеристика 6
+                  span Показатель 6
+                li.table-char__item
+                  span Характеристика 7
+                  span Показатель 7
+                li.table-char__item
+                  span Характеристика 8
+                  span Показатель 8
+                li.table-char__item
+                  span Характеристика 9
+                  span Показатель 9
+                li.table-char__item
+                  span Характеристика 10
+                  span Показатель 10
+            .modal__desc
+              h3 Описание товара
+              p Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа соответствующий условий активизации. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что сложившаяся структура организации играет важную роль в формировании форм развития. Разнообразный и богатый опыт консультация с широким активом требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Таким образом консультация с широким активом требуют определения и уточнения систем массового участия.

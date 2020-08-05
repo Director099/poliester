@@ -6,5 +6,5 @@ mixin category-variety(data)
       h3.category__title-product!= data.title
       p.category__price от #[strong 990,00 ₽]
       .category__wrap
-        a.category__link.category__link--dotted Характеристики
-        a.btn.btn--s-middle.btn--main.category__btn(href="#") Заказать
+        a.category__link.category__link--dotted(href="#modal-char" data-fancybox="") Характеристики
+        a.btn.btn--s-middle.btn--main.category__btn(href="#modal-order" data-fancybox="") Заказать

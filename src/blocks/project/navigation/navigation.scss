@@ -30,21 +30,36 @@
   }
 
   &:hover {
-    color: $color-main;
+    color: $color-warning;
 
     .burger {
-      color: $color-main;
+      color: $color-warning;
     }
   }
 
   @media (max-width: $screen-xl - 1) {
+    position: relative;
     padding: 16px 15px;
     width: 100%;
 
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    background-color: rgba(#9296AA, 0.1);
+    color: $text-color;
+    background-color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 7px;
+      height: 7px;
+      transform: rotate(-45deg) translateY(-50%);
+      border-right: 1px solid #242d43;
+      border-bottom: 1px solid #242d43;
+      transition: .3s;
+    }
   }
 }
 
@@ -54,6 +69,6 @@
   margin-right: 22px;
 
   &:hover {
-    color: $color-main;
+    color: $color-warning;
   }
 }

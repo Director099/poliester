@@ -211,3 +211,41 @@
   line-height: 19px;
   margin-bottom: 6px;
 }
+
+.product-card__btns {
+  margin-bottom: 50px;
+}
+
+.product-card__btns .btn {
+  margin-right: 10px;
+}
+
+.product-card__choice {
+  margin-bottom: 11px;
+
+  @media (min-width: $screen-xl) {
+    max-width: 264px;
+  }
+}
+
+.product-card__drop {
+  display: block;
+}
+
+.product-card__help {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 6px;
+}
+
+.product-card__drop .btn {
+  text-align: left;
+  width: 100%;
+  font-weight: 400;
+  padding: 7.5px 30px 7.5px 16px;
+  border-radius: 0;
+  border: 1px solid #CCDCEC;
+  background-color: transparent;
+}

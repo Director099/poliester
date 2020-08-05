@@ -10,7 +10,14 @@
   &--static {
     position: static;
     background-color: $color-main2;
-    margin-bottom: 40px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &--mb0 {
+    margin-bottom: 0;
   }
 }
 
@@ -42,6 +49,7 @@
 .page-header__info {
   display: flex;
   align-items: flex-end;
+  min-width: 24px;
 }
 
 .page-header__bottom {
@@ -68,7 +76,7 @@
 }
 
 .page-header__menu {
-  margin-right: 25px;
+  //margin-right: 25px;
   margin-bottom: 5px;
 }
 

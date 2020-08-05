@@ -41,6 +41,12 @@ $z-index-modal:               100 !default;
     }
   }
 
+  &--width-middle .modal__dialog {
+    @media (min-width: $screen-lg) {
+      width: 460px;
+    }
+  }
+
   &--full {
     width: 100%;
     min-height: 100%;
@@ -85,7 +91,7 @@ $z-index-modal:               100 !default;
     flex-direction: column;
     min-width: 100%;
     min-height: 100%;
-    background-color: #F4F5F9;
+    background-color: #F4F7FA;
     outline: 0;
   }
 
@@ -93,6 +99,7 @@ $z-index-modal:               100 !default;
     padding: 25px 30px;
     flex-shrink: 0;
     border-bottom: 1px solid #DFE2ED;
+    background: #DBE6F1;
 
     &--p0 {
       padding: 0;
@@ -125,7 +132,7 @@ $z-index-modal:               100 !default;
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
-    color: currentColor;
+    color: #242D43;
 
     &--medium {
       font-weight: 500;
@@ -193,6 +200,13 @@ $z-index-modal:               100 !default;
 .modal__close {
   top: 20px;
   right: 22px;
+
+  > span {
+    &::after,
+    &::before {
+      background-color: $text-color;
+    }
+  }
 }
 
 @keyframes modal-backdrop-show {
@@ -220,17 +234,15 @@ $z-index-modal:               100 !default;
 }
 
 .modal__baron {
-  padding: 0 15px 0px;
   max-height: calc(100vh - 90px);
   @media (min-width: $screen-xl) {
     max-height: calc(100vh - 150px);
-    padding: 0 65px 140px;
   }
 }
 
 .modal__baron .baron__track {
   @media (min-width: $screen-xl) {
-    right: -15px;
+    right: 7px;
   }
 }
 
@@ -238,6 +250,23 @@ $z-index-modal:               100 !default;
   padding-bottom: 0;
 }
 
+.modal__desc {
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+
+.modal__desc h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 17px;
+}
+
 //.modal__baron .baron__scroller {
 //  padding-bottom: 350px;
 //}
+
+.modal__content .table-char span {
+  background-color: #f4f7fa;
+}

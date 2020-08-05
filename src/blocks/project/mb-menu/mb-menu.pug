@@ -1,36 +1,28 @@
 mixin mb-menu(src)
   .mb-menu(id="menu", tabindex='-1', role='dialog')
     .mb-menu__dialog
-      header.page-header
+      header.page-header.page-header--static.page-header--mb0
         .page-header__top
           .container
-            .page-header__row.page-header__row--sb
+            .page-header__row.page-header__row--sb.page-header__row--ai-c
+              +burger('Закрыть меню')(data-fancybox-close="").burger--close.page-header__menu
               .page-header__logo
-                .d-xl-none
-                  button.close.page-header__menu(aria-label="Закрыть меню" data-fancybox-close="")
-                    span
                 +logo('/')
-                  img(src='img/icon/logo.png', alt='Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия', width='66', height='45')
-                  p Интернет магазин пряжи, швейной фурнитуры и товаров для рукоделия
+                  img(src='img/icon/logo.svg', alt='Продажа упаковочных материалов и оборудования от производителя', width='129', height='46')
+                  p Продажа упаковочных материалов и оборудования от производителя
               .page-header__info
-                .d-xl-none
-                  button.icon-btn.js-show-user
-                    svg(width="22" height="22" fill="none")
-                      use(xlink:href="img/symbols.svg#icon-user")
-                  button.icon-btn.js-show-phone
-                    svg(width="22" height="22" fill="none")
-                      use(xlink:href="img/symbols.svg#icon-phone")
-                  button.icon-btn.js-show-basket()
-                    svg(width="27", height="23" fill="none")
-                      use(xlink:href="img/symbols.svg#basket")
-                    span.icon-btn__quan 5
-                  button.icon-btn.js-show-search
-                    svg(width="20" height="20" fill="none")
-                      use(xlink:href="img/symbols.svg#icon-serch")
+                a.icon-btn.d-xl-none(href="#menu-phone" data-fancybox="")
+                  svg(width="22" height="22" fill="none")
+                    use(xlink:href="img/symbols.svg#icon-phone")
       .mb-menu__navigation
         .container
           nav.navigation
-            +mb-product()
+            +mb-product({
+               title: 'МЕНЮ',
+               textLink: 'Каталог',
+               link: '#menu-catalog',
+               tag: 'a'
+            })
             ul.navigation__list
               li.navigation__item
                 a.navigation__link(href="template-page.html") О компании
@@ -45,13 +37,33 @@ mixin mb-menu(src)
         .container
           .page-footer__content
             .page-footer__row.page-footer__row--xl-reverse
-              .page-footer__col.page-footer__col--xl-8
-                section.page-footer__commun
-                  h3.page-footer__title-info Контакты
-                  .page-footer__commun-row
-                    .page-footer__info
-                      +phone()
-                      a.page-footer__link(href="mailto:baimur@yandex.ru") baimur@yandex.ru
-                    .page-footer__address
-                      p Пн - Вс: 9:00 - 18:00 — г.Уфа, Дёмский р-н, ул. Глазовская 24/3 (оптовый склад)
-                      p Пн - Вс: 9:00 - 16:00 — г.Уфа, Дёмский р-н, ул. Вахтангова 25, павильон 6/1 (мелкооптовый магазин)
+              .page-footer__col.page-footer__col--xl-3
+                +footer-nav('Контактная информация', 'footer-nav__title--ident')
+                  li.footer-nav__item.footer-nav__item--ident
+                    span.footer-nav__link.footer-nav__link--size
+                      svg(width="13" height="20")
+                        use(xlink:href="img/symbols.svg#icon-point")
+                      | Офис: Уфа, ул. Кавказская 8/1
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--size(href="tel:+7(347)286-23-87")
+                      svg(width="18" height="18")
+                        use(xlink:href="img/symbols.svg#icon-phone")
+                      | +7 (347) 286-23-87
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--size(href="https://wa.me/79272365699")
+                      svg(width="22" height="22")
+                        use(xlink:href="img/symbols.svg#icon-whatapp")
+                      | +7 (927) 236-56-99
+              .page-footer__col.page-footer__col--xl-3
+                +footer-nav(' ', 'footer-nav__title--ident d-none d-xl-block')
+                  li.footer-nav__item.footer-nav__item--ident
+                    span.footer-nav__link.footer-nav__link--size
+                      svg(width="13" height="20")
+                        use(xlink:href="img/symbols.svg#icon-point")
+                      | Склад: Уфа, ул. Кавказская 8б
+                  li.footer-nav__item.footer-nav__item--ident
+                    a.footer-nav__link.footer-nav__link--size(href="mailto:ufapoli@gmail.com")
+                      svg(width="20" height="15")
+                        use(xlink:href="img/symbols.svg#icon-email")
+                      | ufapoli@gmail.com
+            a.btn.btn--s-middle.btn--tr.btn--b-main.footer-nav__btn(href="#modal-terms" data-fancybox="") Обсудить особые условия

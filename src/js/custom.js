@@ -1,5 +1,13 @@
 'use strict';
 
+(function () {
+  $(".js-text").on('click', function(e) {
+    e.preventDefault();
+    let currentText = $(this).text();
+    $(this).parents('.dropdown').find('.btn').text(currentText);
+  })
+})();
+
 /**
  * @description Плавный скролл
  */
@@ -20,6 +28,17 @@
 (function () {
   $('[data-fancybox]').fancybox({
     touch: false
+  })
+})();
+
+/**
+ * @description кнопка вверх
+ */
+
+(function () {
+  $('.js-to-top-btn').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
   })
 })();
 
@@ -465,7 +484,25 @@
   })
 })();
 
+/**
+ * @description Меню
+ */
 
+
+(function () {
+  const btnHover = $('.catalog__item');
+  btnHover.hover(function(e) {
+    $(this).addClass('active');
+    // btnHover.addClass('burger--close');
+  }, function() {
+    $(this).removeClass('active');
+  });
+
+  $('main, .page-header__top').hover(function(e) {
+    $('.catalog').removeClass('active');
+    // btnHover.removeClass('burger--close');
+  })
+})();
 
 
 /**

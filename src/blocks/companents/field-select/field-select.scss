@@ -14,30 +14,34 @@ $border-radius:               rem(3px) !default;
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 11px;
 
   &__name {
-    @include field-name;
+    //@include field-name;
   }
 
   &__input-wrap {}
 
   &__select {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     line-height: $line-height;
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: 4px 16px;
     font-size: inherit;
     font-family: inherit;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
+    border: 1px solid #CCDCEC;
+    border-radius: 0;
     appearance: none;
     background-color: #fff;
     background-image: svg-load('../blocks/field-select/bg-img/select-down.svg');
     background-repeat: no-repeat;
     background-position: right 0.3em center;
     background-size: 1.063em 0.688em;
+    font-size: 14px;
+    line-height: 23px;
+
 
     &[multiple] {
       background-image: none;
@@ -61,6 +65,14 @@ $border-radius:               rem(3px) !default;
   }
 
   &__help-text {
-    @include field-help-text;
+    //@include field-help-text;
   }
+}
+
+.field-select__name {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 6px;
 }

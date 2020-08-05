@@ -1,20 +1,14 @@
 .catalog {
   position: absolute;
-  top: 66px;
+  top: 39px;
   left: 0;
-  right: 0;
-  //padding: 51px 52px 58px;
-  background: #F4F5F9;
-  box-shadow: 0px 4px 25px rgba(86, 109, 251, 0.07);
-  border-radius: 5px;
-  border: 1px solid rgba(204, 220, 236, 0.65);
+  padding-top: 30px;
 
   transform: translateY(-10px);
   transition: $time;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
-  max-width: 1007px;
 
   &.active {
     transform: translateY(-0px);
@@ -24,21 +18,79 @@
   }
 }
 
-.catalog__row {
-  display: flex;
-  flex-wrap: wrap;
-  //@include row();
+.catalog__inner {
+
+  //padding: 51px 52px 58px;
+  background: #F4F5F9;
+  border-radius: 5px;
 }
 
-.catalog__col {
-  width: 25%;
-  //@include make-col(12);
-  //
-  //&--xl-2 {
-  //  @include col(xl, 2, 12);
-  //}
-  //
-  //&--xl-3 {
-  //  @include col(xl, 3, 12);
-  //}
+.catalog__list {
+  @include ul-none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 263px;
+  background: #F4F7FA;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.catalog__item {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.catalog__link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 13px;
+
+  font-size: 14px;
+  line-height: 19px;
+  color: #181717;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid $black;
+    border-bottom: 2px solid $black;
+    transition: $time;
+  }
+
+  &:hover {
+    background: #0054D7;
+    color: #FBD826;
+
+    &:after {
+      border-color: $white;
+    }
+  }
+}
+
+.catalog__item.active > .catalog__link {
+  background: #0054D7;
+  color: #FBD826;
+
+  &:after {
+    border-color: $white;
+  }
+}
+
+.catalog__item .catalog__list {
+  position: absolute;
+  left: calc(100% - 15px);
+  top: -25px;
+  display: none;
+}
+
+.catalog__item:hover > .catalog__list {
+  display: block;
 }
