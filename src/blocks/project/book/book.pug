@@ -1,15 +1,14 @@
 mixin book(data)
   .book
-    .book__inner
-      a.book__img(href="catalog-single.html")
+    a.book__inner(href="catalog-single.html")
+      .book__img
         img(src= `img/content/cat-${data.img}.jpg`, alt= data.title)
       .book__figures-content
         block
       .book__content
         .book__info
           span.book__edition Полипропиленовая продукция
-        h2.book__title
-          a(href="catalog-single.html")= data.title
+        h2.book__title= data.title
         if(data.desc)
           .book__desc
             p= data.desc
