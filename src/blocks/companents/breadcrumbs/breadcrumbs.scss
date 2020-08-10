@@ -17,13 +17,17 @@ $text-color:                  hsl(0, 0%, 10%) !default;
   line-height: 23px;
 
   a {
-    color: $text-color;
+    color: #95AABE;
     text-decoration: none;
 
     &:hover,
     &:focus {
       color: $color-main;
       text-decoration: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      color: $text-color;
     }
   }
 
@@ -32,11 +36,32 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     margin-right: 0;
     white-space: nowrap;
 
-    &:not(:last-child):after {
-      content: '–';
+    &:not(:nth-last-child(2)) {
+      display: none;
+    }
+
+    &::before {
+      content: '';
       display: inline-block;
-      margin-left: 0;
-      color: $gray;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      border-left: 2.5px solid #95AABE;
+      border-bottom: 2.5px solid #95AABE;
+      transform: rotate(45deg);
+    }
+
+    @media (min-width: $screen-xl) {
+      &:not(:last-child):after {
+        content: '–';
+        display: inline-block;
+        margin-left: 0;
+        color: $gray;
+      }
+
+      &:not(:nth-last-child(2)) {
+        display: inline-block;
+      }
     }
   }
 
@@ -47,9 +72,9 @@ $text-color:                  hsl(0, 0%, 10%) !default;
 
 .breadcrumbs--xs-line {
   @media (max-width: $screen-xl - 1) {
-    padding: 25px 15px;
+    padding: 15px 15px;
     margin-left: -15px;
     margin-right: -15px;
-    border-bottom: 1px solid #DFE2ED;
+    background-color: #F4F7FA;
   }
 }

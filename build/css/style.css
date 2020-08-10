@@ -713,7 +713,7 @@ textarea.field-text__input {
     line-height: 23px;
 }
 .breadcrumbs a {
-    color: #242d43;
+    color: #95aabe;
     text-decoration: none;
 }
 .breadcrumbs a:hover, .breadcrumbs a:focus {
@@ -725,11 +725,18 @@ textarea.field-text__input {
     margin-right: 0;
     white-space: nowrap;
 }
-.breadcrumbs__item:not(:last-child):after {
-    content: "–";
+.breadcrumbs__item:not(:nth-last-child(2)) {
+    display: none;
+}
+.breadcrumbs__item::before {
+    content: "";
     display: inline-block;
-    margin-left: 0;
-    color: gray;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-left: 2.5px solid #95aabe;
+    border-bottom: 2.5px solid #95aabe;
+    transform: rotate(45deg);
 }
 .tabs {
     margin-top: 1rem;
@@ -3476,7 +3483,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .about__name-position {
     margin: 0;
 }
-.review {
+.review__wrap {
     text-align: center;
     padding: 0 15px 27px;
     border-radius: 5px;
@@ -3873,6 +3880,18 @@ input:checked ~ .field-checkbox__name-text:after {
     }
     .burger {
         line-height: 12px;
+    }
+    .breadcrumbs a {
+        color: #242d43;
+    }
+    .breadcrumbs__item:not(:last-child):after {
+        content: "–";
+        display: inline-block;
+        margin-left: 0;
+        color: gray;
+    }
+    .breadcrumbs__item:not(:nth-last-child(2)) {
+        display: inline-block;
     }
     .breadcrumbs {
         margin-bottom: 40px;
@@ -4521,7 +4540,7 @@ input:checked ~ .field-checkbox__name-text:after {
     .about__name {
         display: block;
     }
-    .review {
+    .review__wrap {
         padding: 40px 35px 40px 40px;
         text-align: left;
         min-height: 282px;
@@ -4588,10 +4607,10 @@ input:checked ~ .field-checkbox__name-text:after {
         display: none;
     }
     .breadcrumbs--xs-line {
-        padding: 25px 15px;
+        padding: 15px 15px;
         margin-left: -15px;
         margin-right: -15px;
-        border-bottom: 1px solid #dfe2ed;
+        background-color: #f4f7fa;
     }
     .swiper-container--xs-visible {
         overflow: visible;
@@ -4757,6 +4776,9 @@ input:checked ~ .field-checkbox__name-text:after {
         border-bottom: 2px solid #ccdcec;
         border-right: 2px solid #ccdcec;
         transform: rotate(-45deg) translateY(-50%);
+    }
+    .review {
+        padding-top: 50px;
     }
     .fancybox-active {
         overflow: hidden;

@@ -8,6 +8,9 @@ block content
   main
     .content
       .container
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', 'index.html')
+          +breadcrumbs-item('Спасибо за заявку!')
         h1.title-h.title-h--big.content__title Спасибо за заявку!
         p В ближайшее время менеджер свяжется с вами
 block footer

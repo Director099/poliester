@@ -8,6 +8,9 @@ block content
   main
     .content
       .container
+        +breadcrumbs()
+          +breadcrumbs-item('Главная', 'index.html')
+          +breadcrumbs-item('404')
         h1.title-h.title-h--big.content__title Ошибка 404 #[br] страница не найдена
         p Неправильно набран адрес или такой страницы не существует
 block footer

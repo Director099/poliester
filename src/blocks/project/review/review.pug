@@ -1,14 +1,15 @@
 mixin review({name, company, img, video, text})
   .review
-    .review__row
-      if(video)
-        a.review__img.review__img--play(href="https://www.youtube.com/watch?v=zO5Yy5dDWsM", data-fancybox="")
-          img(src=`img/content/people-${img}.jpg`, alt= name)
-      else
-        .review__img
-          img(src=`img/content/people-${img}.jpg`, alt= name)
-      .review__content
-        .review__desc
-          p= text
-        strong.review__name= name
-        span.review__company= company
+    .review__wrap
+      .review__row
+        if(video)
+          a.review__img.review__img--play(href="https://www.youtube.com/watch?v=zO5Yy5dDWsM", data-fancybox="")
+            img(src=`img/content/people-${img}.jpg`, alt= name)
+        else
+          .review__img
+            img(src=`img/content/people-${img}.jpg`, alt= name)
+        .review__content
+          .review__desc
+            p= text
+          strong.review__name= name
+          span.review__company= company
