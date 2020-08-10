@@ -5,8 +5,8 @@
   overflow: hidden;
   transition: $time;
   border-collapse: collapse;
-  font-size: 14px;
-  line-height: 23px;
+  //font-size: 14px;
+  //line-height: 23px;
   color: $text-color;
 }
 
@@ -37,7 +37,11 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px
+  margin-bottom: 4px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 5px;
+  }
 }
 
 .table-char__item::after {

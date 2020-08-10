@@ -1,6 +1,10 @@
 .card-tab {
-  margin-bottom: 37px;
-  border-bottom: 1px solid #CCDCEC;
+  margin-bottom: 19px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 37px;
+    border-bottom: 1px solid #CCDCEC;
+  }
 }
 
 .card-tab__list {
@@ -23,12 +27,26 @@
   font-size: 18px;
   line-height: 24px;
   color: #95AABE;
-  padding-bottom: 15px;
+
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 15px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+    }
+  }
 
   &--big {
-    font-size: 28px;
-    line-height: 38px;
-    padding-bottom: 18px;
+    @media (min-width: $screen-xl) {
+      font-size: 28px;
+      line-height: 38px;
+      padding-bottom: 18px;
+    }
   }
 
   &--black {
@@ -37,15 +55,6 @@
     &::after {
       background: currentColor;
     }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 1px;
   }
 }
 

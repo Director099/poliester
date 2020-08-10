@@ -1,5 +1,6 @@
 .content {
-  margin-bottom: 100px;
+  //margin-bottom: 100px;
+  margin-bottom: 18px;
   @media (min-width: $screen-xl) {
     margin-bottom: 70px;
   }
@@ -54,6 +55,7 @@
     background-position: center right;
     padding-top: 31px;
     padding-bottom: 33px;
+    margin-bottom: 100px;
     @media (min-width: $screen-xl) {
       padding-top: 61px;
       padding-bottom: 98px;

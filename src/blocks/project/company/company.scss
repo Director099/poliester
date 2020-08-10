@@ -4,3 +4,17 @@
     margin-bottom: 28px;
   }
 }
+
+.company__slider .swiper-pagination {
+  position: static;
+  opacity: 0.3;
+}
+
+.company__slider .swiper-pagination-bullet {
+  background: #C4C4C4;
+  box-shadow: none;
+}
+
+.company__slider .swiper-pagination-bullet-active {
+  background: #0054D7;
+}

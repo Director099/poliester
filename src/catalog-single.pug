@@ -14,34 +14,30 @@ block content
           +breadcrumbs-item('Полипропиленовая продукция', 'catalog.html')
           +breadcrumbs-item('Биг-бэги (Мягкие контейнера)')
         article.product-card
-          .content__row
+          .content__row.product-card__card
             .content__col.content__col--xl-6
               .product-card__slider
-                .swiper-container.gallery-thumbs
-                  .swiper-wrapper
-                    .swiper-slide
-                      .product-card__img.product-card__img--thumb
-                        img(src="img/content/product-1.png")
-                    .swiper-slide
-                      .product-card__img.product-card__img--thumb
-                        img(src="img/content/product-1.png")
-                    .swiper-slide
-                      .product-card__img.product-card__img--thumb
-                        img(src="img/content/product-1.png")
-                    .swiper-slide
-                      .product-card__img.product-card__img--thumb
-                        img(src="img/content/product-1.png")
-                    .swiper-slide
-                      .product-card__img.product-card__img--thumb
-                        img(src="img/content/product-1.png")
+                .product-card__thumb
+                  button.swiper-button-squar.swiper-button-squar--prev.js-thumb-prev(type="button")
+                  .swiper-container.gallery-thumbs
+                    .swiper-wrapper
+                      .swiper-slide
+                        .product-card__img.product-card__img--thumb
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        a.product-card__img.product-card__img--thumb.product-card__img--play(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="")
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--thumb
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--thumb
+                          img(src="img/content/product-1.png")
+                      .swiper-slide
+                        .product-card__img.product-card__img--thumb
+                          img(src="img/content/product-1.png")
 
-
-                  //button.swiper-button-circle.swiper-button-circle--prev(type="button")
-                  //  svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-                  //    path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
-                  //button.swiper-button-circle.swiper-button-circle--next(type="button")
-                  //  svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
-                  //    path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
+                  button.swiper-button-squar.swiper-button-squar--next.js-thumb-next(type="button")
                 .product-card__slide
                   .swiper-container.gallery-top
                     .swiper-wrapper
@@ -61,6 +57,7 @@ block content
                         .product-card__img.product-card__img--height
                           img(src="img/content/product-1.png")
 
+                    .swiper-pagination.d-xl-none
             .content__col.content__col--xl-6
               .product-card__content
                 h1.title-h.title-h--black.product-card__title Биг-бэги (Мягкие контейнера)
@@ -102,7 +99,7 @@ block content
               li.card-tab__item
                 a.card-tab__link.card-tab__link--big.card-tab__link--black(href="#") Разновидности
           .swiper-container-relative.filter-group__slider.product-card__mb
-            .swiper-container.js-category
+            .swiper-container.js-category.filter-group__slider-swipe.filter-group__slider-swipe--after
               .swiper-wrapper
                 .swiper-slide.swiper-slide-width.swiper-slide-height()
                   +category-variety({
@@ -148,26 +145,26 @@ block content
           .card-tab.d-none.d-xl-block
             ul.card-tab__list
               li.card-tab__item
-                a.card-tab__link.active(href="#") Описание
+                a.card-tab__link.active.js-scroll(href="#desc") Описание
               li.card-tab__item
-                a.card-tab__link(href="#") Характеристики
+                a.card-tab__link.js-scroll(href="#char") Характеристики
               li.card-tab__item
-                a.card-tab__link(href="#") Сопутствующие товары
+                a.card-tab__link.js-scroll(href="#related") Сопутствующие товары
               li.card-tab__item
-                a.card-tab__link(href="#") Похожие товары
+                a.card-tab__link.js-scroll(href="#similar") Похожие товары
               li.card-tab__item
-                a.card-tab__link(href="#") Сертификаты
-          .product-card__desc-wrap
+                a.card-tab__link.js-scroll(href="#sert") Сертификаты
+          .product-card__desc-wrap(id="desc")
             h3.product-card__title-desc Общее описание
             .product-card__desc.product-card__desc--clump
               p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Заголовок записи настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
               p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Заголовок записи настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
               p Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Заголовок записи настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития
             button.btn.btn--more.js-reed-more Показать больше
-          .product-card__desc-wrap
+          .product-card__desc-wrap(id="char")
             h3.product-card__title-desc Общие характеристики
             .product-card__desc
-              ul.table-char.product-card__char
+              ul.table-char.product-card__char.active
                 li.table-char__item
                   span Характеристика 1
                   span Показатель 1
@@ -198,8 +195,8 @@ block content
                 li.table-char__item
                   span Характеристика 10
                   span Показатель 10
-              button.btn.btn--more.js-reed-more Показать больше
-    .content.content--overflow.content--xs-pb
+              button.btn.btn--more.js-char-more Показать больше
+    .content.content--overflow.content--xs-pb(id="related")
       .container
         header.content__header
           h2.title-h.content__title Сопутствующие товары
@@ -257,7 +254,7 @@ block content
           button.swiper-button-circle.swiper-button-circle--next(type="button" id="related-next")
             svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
               path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
-    .content.content--overflow.content--xs-pb
+    .content.content--overflow.content--xs-pb(id="similar")
       .container
         header.content__header
           h2.title-h.content__title Похожие товары
@@ -315,7 +312,7 @@ block content
           button.swiper-button-circle.swiper-button-circle--next(type="button" id="similar-next")
             svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
               path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")
-    +content-sert().content--xs-pb.content--overflow
+    +content-sert().content--xs-pb.content--overflow(id="sert")
 block footer
   +page-footer()
   +modal('modal-char', 'Характеристики товара').modal--width-middle

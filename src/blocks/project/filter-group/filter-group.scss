@@ -5,6 +5,28 @@
   }
 }
 
-//.filter-group__slider {
-//  margin-bottom: 5px;
-//}
+.filter-group__slider {
+  position: relative;
+}
+
+.filter-group__slider-swipe::before,
+.filter-group__slider-swipe::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: calc(100% - 20px);
+  z-index: 5
+}
+
+.filter-group__slider-swipe--before::before {
+  left: -1px;
+  box-shadow: 5px 0 15px 1px #B8BDCC;
+}
+
+.filter-group__slider-swipe--after::after {
+  right: -1px;
+  box-shadow: -5px 0 15px 1px #B8BDCC;
+}
+

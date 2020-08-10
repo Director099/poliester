@@ -62,7 +62,11 @@
 }
 
 .category__content {
-  padding: 15px 15px 18px
+  padding: 13px 5px 18px;
+
+  @media (min-width: $screen-xl) {
+    padding: 15px 15px 18px;
+  }
 }
 
 .category__title-product {
@@ -75,7 +79,11 @@
 .category__price {
   font-size: 10px;
   line-height: 19px;
-  margin-bottom: -3px;
+  margin-bottom: 12px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: -3px;
+  }
 }
 
 .category__price strong {

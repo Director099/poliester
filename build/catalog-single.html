@@ -71,7 +71,7 @@
                                         <li class="navigation__item"><a class="navigation__link" href="template-page.html">Новости</a></li>
                                         <li class="navigation__item"><a class="navigation__link" href="template-page.html">Контакты</a></li>
                                     </ul>
-                                </nav><a class="btn btn--white-b" href="#modal-cb" data-fancybox="">Заказать звонок</a>
+                                </nav><a class="btn btn--white-b page-header__btn-cb" href="#modal-cb" data-fancybox="">Заказать звонок</a>
                             </div>
                             <div class="catalog">
                                 <div class="catalog__inner">
@@ -197,33 +197,29 @@
                             </li>
                         </ul>
                         <article class="product-card">
-                            <div class="content__row">
+                            <div class="content__row product-card__card">
                                 <div class="content__col content__col--xl-6">
                                     <div class="product-card__slider">
-                                        <div class="swiper-container gallery-thumbs">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
+                                        <div class="product-card__thumb">
+                                            <button class="swiper-button-squar swiper-button-squar--prev js-thumb-prev" type="button"></button>
+                                            <div class="swiper-container gallery-thumbs">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
+                                                    </div>
+                                                    <div class="swiper-slide"><a class="product-card__img product-card__img--thumb product-card__img--play" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox=""><img src="img/content/product-1.png"></a></div>
+                                                    <div class="swiper-slide">
+                                                        <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="product-card__img product-card__img--thumb"><img src="img/content/product-1.png"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!--button.swiper-button-circle.swiper-button-circle--prev(type="button")-->
-                                            <!--  svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")-->
-                                            <!--    path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")-->
-                                            <!--button.swiper-button-circle.swiper-button-circle--next(type="button")-->
-                                            <!--  svg(width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")-->
-                                            <!--    path(d="M13.3303 7.03033C13.6232 6.73744 13.6232 6.26256 13.3303 5.96967L8.55737 1.1967C8.26448 0.903806 7.78961 0.903806 7.49671 1.1967C7.20382 1.48959 7.20382 1.96447 7.49671 2.25736L11.7394 6.5L7.49671 10.7426C7.20382 11.0355 7.20382 11.5104 7.49671 11.8033C7.78961 12.0962 8.26448 12.0962 8.55737 11.8033L13.3303 7.03033ZM0.200012 7.25H12.8V5.75H0.200012V7.25Z" fill="#3A426D")-->
+                                            <button class="swiper-button-squar swiper-button-squar--next js-thumb-next" type="button"></button>
                                         </div>
                                         <div class="product-card__slide">
                                             <div class="swiper-container gallery-top">
@@ -244,6 +240,7 @@
                                                         <div class="product-card__img product-card__img--height"><img src="img/content/product-1.png"></div>
                                                     </div>
                                                 </div>
+                                                <div class="swiper-pagination d-xl-none"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -286,7 +283,7 @@
                                 </ul>
                             </div>
                             <div class="swiper-container-relative filter-group__slider product-card__mb">
-                                <div class="swiper-container js-category">
+                                <div class="swiper-container js-category filter-group__slider-swipe filter-group__slider-swipe--after">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide swiper-slide-width swiper-slide-height">
                                             <div class="category">
@@ -373,14 +370,14 @@
                             </div>
                             <div class="card-tab d-none d-xl-block">
                                 <ul class="card-tab__list">
-                                    <li class="card-tab__item"><a class="card-tab__link active" href="#">Описание</a></li>
-                                    <li class="card-tab__item"><a class="card-tab__link" href="#">Характеристики</a></li>
-                                    <li class="card-tab__item"><a class="card-tab__link" href="#">Сопутствующие товары</a></li>
-                                    <li class="card-tab__item"><a class="card-tab__link" href="#">Похожие товары</a></li>
-                                    <li class="card-tab__item"><a class="card-tab__link" href="#">Сертификаты</a></li>
+                                    <li class="card-tab__item"><a class="card-tab__link active js-scroll" href="#desc">Описание</a></li>
+                                    <li class="card-tab__item"><a class="card-tab__link js-scroll" href="#char">Характеристики</a></li>
+                                    <li class="card-tab__item"><a class="card-tab__link js-scroll" href="#related">Сопутствующие товары</a></li>
+                                    <li class="card-tab__item"><a class="card-tab__link js-scroll" href="#similar">Похожие товары</a></li>
+                                    <li class="card-tab__item"><a class="card-tab__link js-scroll" href="#sert">Сертификаты</a></li>
                                 </ul>
                             </div>
-                            <div class="product-card__desc-wrap">
+                            <div class="product-card__desc-wrap" id="desc">
                                 <h3 class="product-card__title-desc">Общее описание</h3>
                                 <div class="product-card__desc product-card__desc--clump">
                                     <p>Разнообразный и богатый опыт консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Заголовок записи настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений. Таким образом сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития</p>
@@ -389,10 +386,10 @@
                                 </div>
                                 <button class="btn btn--more js-reed-more">Показать больше</button>
                             </div>
-                            <div class="product-card__desc-wrap">
+                            <div class="product-card__desc-wrap" id="char">
                                 <h3 class="product-card__title-desc">Общие характеристики</h3>
                                 <div class="product-card__desc">
-                                    <ul class="table-char product-card__char">
+                                    <ul class="table-char product-card__char active">
                                         <li class="table-char__item"><span>Характеристика 1</span><span>Показатель 1</span></li>
                                         <li class="table-char__item"><span>Характеристика 2</span><span>Показатель 2</span></li>
                                         <li class="table-char__item"><span>Характеристика 3</span><span>Показатель 3</span></li>
@@ -404,13 +401,13 @@
                                         <li class="table-char__item"><span>Характеристика 9</span><span>Показатель 9</span></li>
                                         <li class="table-char__item"><span>Характеристика 10</span><span>Показатель 10</span></li>
                                     </ul>
-                                    <button class="btn btn--more js-reed-more">Показать больше</button>
+                                    <button class="btn btn--more js-char-more">Показать больше</button>
                                 </div>
                             </div>
                         </article>
                     </div>
                 </div>
-                <div class="content content--overflow content--xs-pb">
+                <div class="content content--overflow content--xs-pb" id="related">
                     <div class="container">
                         <header class="content__header">
                             <h2 class="title-h content__title">Сопутствующие товары</h2>
@@ -425,7 +422,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -446,7 +443,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -467,7 +464,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -488,7 +485,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -509,7 +506,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -538,7 +535,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="content content--overflow content--xs-pb">
+                <div class="content content--overflow content--xs-pb" id="similar">
                     <div class="container">
                         <header class="content__header">
                             <h2 class="title-h content__title">Похожие товары</h2>
@@ -553,7 +550,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -574,7 +571,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -595,7 +592,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -616,7 +613,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -637,7 +634,7 @@
                                                 </div>
                                                 <div class="book__content">
                                                     <div class="book__info"><span class="book__edition">Полипропиленовая продукция</span></div>
-                                                    <h2 class="book__title"><a href="#">Мешки полипропеленовые</a></h2>
+                                                    <h2 class="book__title"><a href="catalog-single.html">Мешки полипропеленовые</a></h2>
                                                     <div class="book__desc">
                                                         <p>Книга поможет углубить знания в области физиологии и анатомии, прежде всего макроскопической; научит «читать» и анализировать изображения, сделанные с помощью современных методов визуализации — рентгенографии, компьютерной и магнитно-резонансной томографии;</p>
                                                     </div>
@@ -666,7 +663,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="content content--xs-pb content--overflow">
+                <div class="content content--xs-pb content--overflow" id="sert">
                     <div class="container">
                         <div class="company">
                             <header class="content__header company__header">
@@ -683,6 +680,7 @@
                                         <div class="swiper-slide"><a class="sert" href="img/content/sert-2.jpg" data-fancybox=""><img src="img/content/sert-2.jpg" alt="Сертификат" /></a></div>
                                         <div class="swiper-slide"><a class="sert" href="img/content/sert-3.jpg" data-fancybox=""><img src="img/content/sert-3.jpg" alt="Сертификат" /></a></div>
                                     </div>
+                                    <div class="swiper-pagination"></div>
                                 </div>
                                 <button class="swiper-button-circle swiper-button-circle--prev" type="button" id="sert-prev">
                                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">

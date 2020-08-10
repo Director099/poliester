@@ -110,6 +110,22 @@
       }
     }
   });
+  //
+  // swiper.on('progress', function (progress) {
+  //   const slider = this.$el[0];
+  //   console.log(progress)
+  //
+  //   if (progress >= 1) {
+  //     slider.classList.remove(`filter-group__slider-swipe--before`);
+  //     slider.classList.remove(`filter-group__slider-swipe--after`);
+  //   } else if (progress <= 0) {
+  //     slider.classList.remove(`filter-group__slider-swipe--before`);
+  //     slider.classList.add(`filter-group__slider-swipe--after`);
+  //   } else {
+  //     slider.classList.add(`filter-group__slider-swipe--before`);
+  //     slider.classList.add(`filter-group__slider-swipe--after`);
+  //   }
+  // });
 
   /**
    * @description таб фильтр
@@ -141,18 +157,23 @@
   var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 30,
     slidesPerView: 4,
-    freeMode: true,
+    // freeMode: true,
     direction: 'vertical',
     autoHeight: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     navigation: {
-      nextEl: '.swiper-button-circle--next',
-      prevEl: '.swiper-button-circle--prev',
+      nextEl: '.js-thumb-next',
+      prevEl: '.js-thumb-prev',
     },
   });
   var galleryTop = new Swiper('.gallery-top', {
     slidesPerView: 'auto',
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
 
     thumbs: {
       swiper: galleryThumbs
@@ -235,6 +256,10 @@
     navigation: {
       nextEl: '#sert-next',
       prevEl: '#sert-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
     breakpoints: {
       1200: {
@@ -439,6 +464,16 @@
     const contentDescription = $(this).prev();
     contentDescription.toggleClass('product-card__desc--clump');
     if(contentDescription.hasClass('product-card__desc--clump')) {
+      $(this).text('Показать больше')
+    } else {
+      $(this).text('Скрыть')
+    }
+  })
+
+  $('.js-char-more').on('click', function() {
+    const contentDescription = $(this).prev();
+    contentDescription.toggleClass('active');
+    if(contentDescription.hasClass('active')) {
       $(this).text('Показать больше')
     } else {
       $(this).text('Скрыть')

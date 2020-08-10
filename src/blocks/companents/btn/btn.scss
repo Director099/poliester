@@ -130,12 +130,26 @@ $border-radius: 5px !default;
     color: $white;
     background-color: transparent;
     border: 1px solid $white;
+
+    &:hover,
+    &:focus {
+      color: $color-warning;
+      //box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
+    }
   }
 
   &--main-b {
     color: $color-main;
     background-color: transparent;
     border: 1px solid $color-main;
+
+    &:hover,
+    &:focus {
+      background-color: $color-main2;
+      border-color: $color-main2;
+      color: $color-warning;
+      //box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
+    }
   }
 
   &--main {
@@ -145,8 +159,10 @@ $border-radius: 5px !default;
 
     &:hover,
     &:focus {
-      color: #fff;
-      box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
+      background-color: $color-main2;
+      border-color: $color-main2;
+      color: $color-warning;
+      //box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
     }
   }
 
