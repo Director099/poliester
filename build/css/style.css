@@ -1800,6 +1800,7 @@ input:checked ~ .field-checkbox__name-text:after {
     background: #0054d7;
 }
 .preview {
+    position: relative;
     display: block;
     text-decoration: none;
     color: #242d43;
@@ -1807,6 +1808,12 @@ input:checked ~ .field-checkbox__name-text:after {
     border: 1px solid #ccdcec;
     border-radius: 16px;
     background-color: white;
+}
+.preview:hover {
+    box-shadow: 0px 7px 10px 0.5px rgba(184, 189, 204, 0.5);
+}
+.preview:hover .preview__btn {
+    background-color: #0054d7;
 }
 .preview__img {
     width: 100%;
@@ -1847,6 +1854,8 @@ input:checked ~ .field-checkbox__name-text:after {
     border: 0;
     border-radius: 50%;
     padding: 0;
+    background-color: #ccdcec;
+    transition: 0.3s;
 }
 .product {
     position: relative;
@@ -3008,6 +3017,18 @@ input:checked ~ .field-checkbox__name-text:after {
     border-bottom: 1px solid #ccdcec;
 }
 .mb-product__wrap {
+    display: none;
+}
+.mb-product__title--phone {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.mb-product__title--phone span {
+    color: #3a426d;
+    opacity: 0.5;
+}
+.mb-product__title--phone::after {
     display: none;
 }
 .curtain {

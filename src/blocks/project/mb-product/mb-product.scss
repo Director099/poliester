@@ -134,3 +134,17 @@
   display: none;
 }
 
+.mb-product__title--phone {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+
+  span {
+    color: #3A426D;
+    opacity: 0.5;
+  }
+
+  &::after {
+    display: none;
+  }
+}
