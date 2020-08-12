@@ -114,14 +114,39 @@
   margin-bottom: 20px;
 }
 
+.product-card__price-row {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 23px;
+}
+
 .product-card__price {
+  position: relative;
   display: block;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #3A426D;
-  margin-bottom: 23px;
+
   font-family: $font-family-2;
+
+  &--old {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -7px;
+      right: -3px;
+      height: 2px;
+      margin-top: -1px;
+      background-color: #ff2741;
+    }
+  }
 }
 
 .product-card__price sub {

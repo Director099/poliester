@@ -2173,14 +2173,35 @@ input:checked ~ .field-checkbox__name-text:after {
     display: flex;
     margin-bottom: 20px;
 }
+.product-card__price-row {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 23px;
+}
 .product-card__price {
+    position: relative;
     display: block;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     color: #3a426d;
-    margin-bottom: 23px;
     font-family: "Montserrat", sans-serif;
+}
+.product-card__price--old {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+.product-card__price--old::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    right: -3px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #ff2741;
 }
 .product-card__price sub {
     font-size: 12px;
