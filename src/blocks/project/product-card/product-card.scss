@@ -224,6 +224,13 @@
   }
 }
 
+.product-card__img--height.product-card__img--play::after {
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+}
+
 .product-card__blur {
   position: absolute;
   bottom: 0;

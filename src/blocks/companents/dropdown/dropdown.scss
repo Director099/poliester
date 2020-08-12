@@ -44,7 +44,7 @@ $transition-time:             0.3s !default;
       z-index: 1;
       visibility: visible;
       opacity: 1;
-      width: auto;
+      width: calc(100% - 40px);
     }
   }
 

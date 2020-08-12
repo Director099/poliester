@@ -21,6 +21,10 @@
   }
 }
 
+.page-header--static .page-header__bottom {
+  background-color: #F4F7FA;
+}
+
 .page-header__top {
   position: relative;
   padding-top: 9px;
@@ -29,7 +33,7 @@
   @media (min-width: $screen-xl) {
     padding-top: 14px;
     padding-bottom: 14px;
-    border-bottom: 1px solid rgba(#CCDCEC, 0.5);
+    //border-bottom: 1px solid rgba(#CCDCEC, 0.5);
   }
 }
 
@@ -55,6 +59,7 @@
 .page-header__bottom {
   padding-top: 15px;
   padding-bottom: 18px;
+  background: rgba(244, 247, 250, 0.97);
 
   &--line {
     margin-bottom: 40px;

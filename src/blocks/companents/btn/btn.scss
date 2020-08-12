@@ -89,6 +89,12 @@ $border-radius: 5px !default;
   &--b-main {
     border-color: $color-main;
     color: $color-main;
+
+    &:hover,
+    &:focus {
+      background-color: $color-main;
+      color: $color-warning;
+    }
   }
 
   &--lighten {
@@ -120,6 +126,11 @@ $border-radius: 5px !default;
     padding-left: 7px;
     padding-right: 7px;
     font-weight: 400;
+
+    &:hover {
+      border-color: $color-main2;
+      color: $color-main2;
+    }
 
     @media (min-width: $screen-xl) {
       line-height: 14px;
@@ -195,6 +206,12 @@ $border-radius: 5px !default;
       border-right: 2px solid #0054D7;
       border-bottom: 2px solid #0054D7;
       transform: rotate(45deg) translateY(-50%);
+    }
+
+    &.active::after {
+      transform: rotate(-135deg) translateY(-50%);
+      left: 2px;
+      top: 35%;
     }
   }
 

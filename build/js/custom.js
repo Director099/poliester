@@ -162,6 +162,8 @@
     autoHeight: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    allowSlidePrev: true,
+    allowSlideNext: true,
     navigation: {
       nextEl: '.js-thumb-next',
       prevEl: '.js-thumb-prev',
@@ -179,6 +181,14 @@
       swiper: galleryThumbs
     }
   });
+
+  $('.js-thumb-prev').on('click', function() {
+    galleryTop.slidePrev();
+  })
+
+  $('.js-thumb-next').on('click', function() {
+    galleryTop.slideNext();
+  })
 })();
 
 /**
@@ -461,6 +471,7 @@
 
 (function () {
   $('.js-reed-more').on('click', function() {
+    $(this).toggleClass('active');
     const contentDescription = $(this).prev();
     contentDescription.toggleClass('product-card__desc--clump');
     if(contentDescription.hasClass('product-card__desc--clump')) {
@@ -471,6 +482,7 @@
   })
 
   $('.js-char-more').on('click', function() {
+    $(this).toggleClass('active')
     const contentDescription = $(this).prev();
     contentDescription.toggleClass('active');
     if(contentDescription.hasClass('active')) {

@@ -22,7 +22,7 @@
 .navigation__link {
   display: inline-block;
   text-decoration: none;
-  color: $white;
+  color: $text-color;
   font-weight: 600;
 
   .burger {
@@ -30,11 +30,11 @@
   }
 
   &:hover {
-    color: $color-warning;
+    color: $color-main;
 
-    .burger {
-      color: $color-warning;
-    }
+    //.burger {
+    //  color: $color-main;
+    //}
   }
 
   @media (max-width: $screen-xl - 1) {
@@ -69,6 +69,6 @@
   margin-right: 22px;
 
   &:hover {
-    color: $color-warning;
+    color: $color-main2;
   }
 }
