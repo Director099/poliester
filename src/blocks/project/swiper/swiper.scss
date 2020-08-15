@@ -63,7 +63,7 @@
   }
 }
 
-.swiper-button-circle {
+.swiper-button-pos {
   display: none;
 
   @media (min-width: $screen-xl) {
@@ -73,13 +73,8 @@
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    border-radius: 50px;
-    background-color: $white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     border: none;
-    padding: 0;
     z-index: 1;
-    transition: $time;
 
     &--next {
       right: -15px;
@@ -89,11 +84,97 @@
       left: -15px;
       transform: translateY(-50%) rotate(-180deg);
     }
+  }
+}
 
-    svg {
-      display: inline-block;
-      vertical-align: middle;
+@media (min-width: $screen-xl) {
+  .swiper-button-pos .swiper-button-circle--next {
+    right: 0;
+  }
+
+  .swiper-button-pos .swiper-button-circle--prev {
+    left: 0;
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  .swiper-button-circle {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      background-color: $white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+      border: 1px solid #CCDCEC;
+      padding: 0;
+      z-index: 9;
+      transition: $time;
+
+      &--next {
+        right: -15px;
+      }
+
+      &--prev {
+        left: -15px;
+        transform: translateY(-50%) rotate(-180deg);
+      }
+
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        transition: $time;
+      }
+
+      &:hover {
+        border-color: $color-main2;
+
+        svg path {
+          fill: $color-main2;
+        }
+      }
     }
+  }
+
+  .swiper-button-pos-shadow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 67px;
+    height: 273px;
+    background: #B8BDCC;
+    filter: blur(16px);
+    border-radius: 16px;
+  }
+
+  .swiper-button-pos-shadow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-54%);
+    width: 140px;
+    height: 370px;
+    background-color: #fdfdfe;
+    z-index: 1;
+  }
+
+  .swiper-button-pos-shadow--next::before {
+    left: 15px;
+  }
+
+  .swiper-button-pos-shadow--prev::after {
+    left: 0px;
+  }
+
+  .swiper-button-pos-shadow--next::after {
+    left: 15px;
   }
 }
 

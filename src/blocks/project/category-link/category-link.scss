@@ -63,12 +63,16 @@
       display: none;
     }
 
-    &:hover {
-      box-shadow: 1px 2px 7px rgba(204, 220, 236, 0.5);
-      &::after {
-        opacity: 0;
-      }
+    &:hover a {
+      color: $color-main2;
     }
+
+    //&:hover {
+    //  box-shadow: 1px 2px 7px rgba(204, 220, 236, 0.5);
+    //  &::after {
+    //    opacity: 0;
+    //  }
+    //}
   }
 }
 

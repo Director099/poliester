@@ -41,7 +41,7 @@ $transition-time:             0.3s !default;
   &--open {
 
     #{$block-name}__menu {
-      z-index: 1;
+      z-index: 9;
       visibility: visible;
       opacity: 1;
       width: calc(100% - 40px);

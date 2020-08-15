@@ -37,6 +37,7 @@ $border-radius: 5px !default;
   background-image: none;
   cursor: pointer;
   transition: $time;
+  will-change: transform;
 
   @media (min-width: $screen-xl) {
     font-size: 14px;
@@ -94,6 +95,10 @@ $border-radius: 5px !default;
     &:focus {
       background-color: $color-main;
       color: $color-warning;
+    }
+
+    &:active {
+      transform: scale(0.98);
     }
   }
 
@@ -161,6 +166,10 @@ $border-radius: 5px !default;
       color: $color-warning;
       //box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
     }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 
   &--main {
@@ -174,6 +183,10 @@ $border-radius: 5px !default;
       border-color: $color-main2;
       color: $color-warning;
       //box-shadow: 0px 4px 12px rgba(86, 109, 251, 0.3);
+    }
+
+    &:active {
+      transform: scale(0.98);
     }
   }
 

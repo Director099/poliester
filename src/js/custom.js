@@ -1,12 +1,5 @@
 'use strict';
 
-(function () {
-  $(".js-text").on('click', function(e) {
-    e.preventDefault();
-    let currentText = $(this).text();
-    $(this).parents('.dropdown').find('.btn').text(currentText);
-  })
-})();
 
 /**
  * @description Плавный скролл
@@ -110,22 +103,22 @@
       }
     }
   });
-  //
-  // swiper.on('progress', function (progress) {
-  //   const slider = this.$el[0];
-  //   console.log(progress)
-  //
-  //   if (progress >= 1) {
-  //     slider.classList.remove(`filter-group__slider-swipe--before`);
-  //     slider.classList.remove(`filter-group__slider-swipe--after`);
-  //   } else if (progress <= 0) {
-  //     slider.classList.remove(`filter-group__slider-swipe--before`);
-  //     slider.classList.add(`filter-group__slider-swipe--after`);
-  //   } else {
-  //     slider.classList.add(`filter-group__slider-swipe--before`);
-  //     slider.classList.add(`filter-group__slider-swipe--after`);
-  //   }
-  // });
+
+  swiper.on('progress', function (progress) {
+    const slider = this.$el[0];
+    console.log(progress)
+
+    // if (progress >= 1) {
+    //   slider.classList.remove(`filter-group__slider-swipe--before`);
+    //   slider.classList.remove(`filter-group__slider-swipe--after`);
+    // } else if (progress <= 0) {
+    //   slider.classList.remove(`filter-group__slider-swipe--before`);
+    //   slider.classList.add(`filter-group__slider-swipe--after`);
+    // } else {
+    //   slider.classList.add(`filter-group__slider-swipe--before`);
+    //   slider.classList.add(`filter-group__slider-swipe--after`);
+    // }
+  });
 
   /**
    * @description таб фильтр
@@ -463,7 +456,14 @@
     .on('keydown.nth.dropdown.data-api', toggle, Dropdown.prototype.keydown)
     .on('keydown.nth.dropdown.data-api', '.dropdown__menu', Dropdown.prototype.keydown)
 
+  $(".js-text").on('click', function(e) {
+    e.preventDefault();
+    let currentText = $(this).text();
+    $(this).parents('.dropdown').find('.btn').text(currentText);
+    clearMenus();
+  })
 }(jQuery);
+
 
 /**
  * @description Читать далее

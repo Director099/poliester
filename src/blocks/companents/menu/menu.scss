@@ -37,8 +37,11 @@ $border-color:                hsl(0, 0%, 60%) !default;
     padding: 0.5rem 1rem;
     color: $text-color;
     text-decoration: none;
-    font-size: 14px;
-    line-height: 18px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 14px;
+      line-height: 18px;
+    }
 
     &:hover,
     &:focus {
