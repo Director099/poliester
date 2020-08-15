@@ -4133,6 +4133,9 @@ input:checked ~ .field-checkbox__name-text:after {
         border: none;
         z-index: 1;
     }
+    .swiper-button-pos--rec {
+        top: 40%;
+    }
     .swiper-button-pos--next {
         right: -15px;
     }

@@ -76,6 +76,10 @@
     border: none;
     z-index: 1;
 
+    &--rec {
+      top: 40%;
+    }
+
     &--next {
       right: -15px;
     }
