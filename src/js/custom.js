@@ -164,6 +164,7 @@
   });
   var galleryTop = new Swiper('.gallery-top', {
     slidesPerView: 'auto',
+    spaceBetween: 15,
 
     pagination: {
       el: '.swiper-pagination',

@@ -2268,8 +2268,11 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
     cursor: pointer;
 }
+.product-card__img--thumb img {
+    object-fit: cover;
+}
 .product-card__img--thumb:hover {
-    filter: drop-shadow(1px 2px 7px rgba(204, 220, 236, 0.5));
+    box-shadow: 1px 2px 7px rgba(204, 220, 236, 0.5);
 }
 .product-card__img--play {
     position: relative;
@@ -4063,7 +4066,7 @@ input:checked ~ .field-checkbox__name-text:after {
         line-height: 44px;
     }
     .title-h--m-big {
-        margin-bottom: 65px;
+        margin-bottom: 35px;
     }
     .burger {
         color: #242d43;
@@ -4501,6 +4504,11 @@ input:checked ~ .field-checkbox__name-text:after {
     .product-card__slider {
         display: flex;
         margin-bottom: 0;
+    }
+    .product-card__slide {
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .product-card__img--height {
         height: 460px;
